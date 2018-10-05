@@ -18,6 +18,10 @@ def all_cnn_module(nclasses):
     net.append(nn.ReLU())
     net.append(nn.Conv2d(in_channels=96, out_channels=96, kernel_size=5, stride=(1, 2), padding=2, dilation=1, groups=1))
     net.append(nn.ReLU())
+    net.append(nn.Conv2d(in_channels=96, out_channels=96, kernel_size=5, stride=(1, 2), padding=2, dilation=1, groups=1))
+    net.append(nn.ReLU())
+    net.append(nn.Conv2d(in_channels=96, out_channels=96, kernel_size=3, stride=(1, 2), padding=1, dilation=1, groups=1))
+    net.append(nn.ReLU())
     net.append(nn.Conv2d(in_channels=96, out_channels=96, kernel_size=3, stride=(1, 2), padding=1, dilation=1, groups=1))
     net.append(nn.ReLU())
 
@@ -38,10 +42,10 @@ def all_cnn_module(nclasses):
     net.append(nn.ReLU())
 
     net.append(nn.AvgPool2d((1, 6)))
-    net.append(nn.AvgPool2d((6, 1)))
+    net.append(nn.AvgPool2d((4, 1)))
     net.append(Flatten())
 
-    net.append(nn.Linear(10400, 192 * 16))
+    net.append(nn.Linear(4160, 192 * 16))
     net.append(nn.Linear(192 * 16, 192 * 2))
     net.append(nn.Linear(192 * 2, 100))
     net.append(nn.Linear(100, nclasses))
