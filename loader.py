@@ -105,7 +105,7 @@ class UtteranceValidationDataset(Dataset):
         labels = torch.from_numpy(np.array(self.labels[index]).astype(int)).long()
         enrol = torch.from_numpy(self.enrol[trial[0]]).float()
         test = torch.from_numpy(self.test[trial[1]]).float()
-        return labels, enrol, test
+        return trial, labels, enrol, test
 
     def __len__(self):
         return self.num_entries

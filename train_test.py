@@ -80,18 +80,27 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 # Now for the validation set
                 val_prediction = []
                 val_observed = []
-                for j, (val_labels, val_enrol, val_test) in (enumerate(val_loader)):
+                enrol = {}
+                test = {}
+                for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
                     if gpu:
                         val_labels, val_data, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
-                    embedding1 = extract_embedding(val_enrol, net, layer_name, (len(val_enrol), embedding_size))
-                    embedding2 = extract_embedding(val_test, net, layer_name, (len(val_enrol), embedding_size))
+                    key_test, key_enrol = trial
+                    if key_test in test:
+                        embedding_test = enrol[key_test]
+                    else:
+                        embedding_test = extract_embedding(val_test, net, layer_name, (len(val_test), embedding_size))
+                        enrol[key_test] = embedding_test
+                    if key_enrol in enrol:
+                        embedding_enrol = enrol[key_enrol]
+                    else:
+                        embedding_enrol = extract_embedding(val_enrol, net, layer_name, (len(val_enrol), embedding_size))
+                        enrol[key_enrol] = embedding_enrol
                     cos = torch.nn.CosineSimilarity()
-                    val_output = cos(embedding1, embedding2)
+                    val_output = cos(embedding_test, embedding_enrol)
                     val_prediction.append(val_output)
                     val_labels = val_labels.cpu().numpy()
                     val_observed.append(val_labels)
-                    if j>40:
-                        break
                 val_prediction = np.concatenate(val_prediction)
                 val_observed = np.concatenate(val_observed)
                 # compute the accuracy of the prediction
@@ -170,14 +179,25 @@ def infer_embeddings(net, layer_name, embedding_size, transform=False, gpu=True)
     with torch.no_grad():
         test_prediction = []
         test_observed = []
-        for j, (test_labels, test_enrol, test_test) in tqdm(enumerate(test_loader)):
+        enrol = {}
+        test = {}
+        for j, (trial, test_labels, test_enrol, test_test) in (enumerate(test_loader)):
             if gpu:
                 test_labels, test_data, test_test = test_labels.cuda(), test_enrol.cuda(), test_test.cuda()
-            embedding1 = extract_embedding(test_enrol, net, layer_name, (len(test_enrol), embedding_size))
-            embedding2 = extract_embedding(test_test, net, layer_name, (len(test_enrol), embedding_size))
+            key_test, key_enrol = trial
+            if key_test in test:
+                embedding_test = enrol[key_test]
+            else:
+                embedding_test = extract_embedding(test_test, net, layer_name, (len(test_test), embedding_size))
+                enrol[key_test] = embedding_test
+            if key_enrol in enrol:
+                embedding_enrol = enrol[key_enrol]
+            else:
+                embedding_enrol = extract_embedding(test_enrol, net, layer_name, (len(test_enrol), embedding_size))
+                enrol[key_enrol] = embedding_enrol
             cos = torch.nn.CosineSimilarity()
-            test_output = cos(embedding1, embedding2)
-            test_prediction.append(test_output)
+            test_output = cos(embedding_test, embedding_enrol)
+            test_prediction.append(test_output.cpu().numpy())
             test_labels = test_labels.cpu().numpy()
             test_observed.append(test_labels)
         test_prediction = np.concatenate(test_prediction)
