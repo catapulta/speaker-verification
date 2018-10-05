@@ -136,12 +136,12 @@ class UtteranceTestDataset(Dataset):
 
 
 if __name__ == "__main__":
-    dl = DataDownload(vad_nframes=300)
-    # dl.download()
+    dl = DataDownload(vad_nframes=10000)
+    dl.download()
     dl.get_train()
     dl.get_dev()
-    # dl.get_test()
-
-    print(UtteranceTrainDataset()[1][1])
+    dl.get_test()
+    print('Download and pre-processing successful.')
+    # print(UtteranceTrainDataset()[1][1])
     # UtteranceTestDataset()[1]
-    print(UtteranceValidationDataset()[1][2])
+    # print(UtteranceValidationDataset()[1][2])
