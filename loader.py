@@ -35,7 +35,7 @@ class DataDownload:
         print('Downloading tar files...')
         for file in parts:
             p = subprocess.Popen(
-                'wget https://11785fall2018.s3.amazonaws.com/hw2p2_{0}.tar.gz -O /data/hw2p2_{0}.tar.gz'.format(file),
+                'wget -O /data/hw2p2_{0}.tar.gz https://11785fall2018.s3.amazonaws.com/hw2p2_{0}.tar.gz'.format(file),
                 shell=True)
             p.wait()
         print('Downloaded files to ./data.')
@@ -131,11 +131,11 @@ if __name__ == "__main__":
 
     # path, part = sys.argv[1], sys.argv[2]
     print('Setting to {} frames.'.format(sys.args[1]))
-    dl = DataDownload(vad_nframes=int(sys.args[1]))
-    dl.download()
-    dl.get_train()
+    dl = DataDownload(vad_nframes=10000)
+    dl.download(parts=['A', 'B'])
+    dl.extract(parts=['A', 'B'], erase_tar=False)
+    dl.get_train(parts=[1, 2])
     dl.get_dev()
-    dl.get_test()
     print('Download and pre-processing successful.')
     # print(UtteranceTrainDataset()[1][1])
     # UtteranceTestDataset()[1]
