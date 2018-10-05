@@ -127,7 +127,7 @@ class UtteranceTestDataset(Dataset):
 
 
 if __name__ == "__main__":
-    dl = DataDownload(vad_nframes=10000)
+    dl = DataDownload(vad_nframes=9984)
     dl.download(parts=['A', 'B'])
     dl.extract(parts=['A', 'B'], erase_tar=False)
     dl.get_train(parts=[1, 2])
