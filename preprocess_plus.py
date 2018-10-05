@@ -7,17 +7,22 @@ from preprocess import normalize
 
 ## VAD Parameters ##
 VAD_THRESHOLD = -80  # if a frame has no filter that exceeds this threshold, it is assumed silent and removed
-VAD_NFRAMES = 150  # if a filtered utterance is shorter than this after VAD, the full utterance is retained
+VAD_NFRAMES = 150  # if a filtered utterance is shorter than this after VAD, the utterance is reverse padded
 
 assert (VAD_THRESHOLD >= -100.0)
 assert (VAD_NFRAMES >= 1)
 
 
-def bulk_VAD(feats):
-    return [normalize(VAD(utt, i)) for i, utt in enumerate(tqdm(feats))]
+def bulk_VAD(feats, vad_nframes=VAD_NFRAMES):
+    return np.array([
+        normalize(
+            select_random_frames(
+                pad_pattern_end(VAD(utt), vad_nframes),
+                vad_nframes),
+        ).T for utt in tqdm(feats)])
 
 
-def VAD(utterance, obs_idx):
+def VAD(utterance):
     """
     The utterances may contain silence segments. These are clearly not useful for training (or during testing),
     and it is critical that they are filtered out in a preprocessing stage. This stage, in which we only retain
@@ -29,10 +34,7 @@ def VAD(utterance, obs_idx):
     """
     filtered = utterance[utterance.max(axis=1) > VAD_THRESHOLD]
     if len(filtered) == 0:
-        print('Observation number {} has no values above VAD treshold. Selecting top values...'.format(obs_idx))
         filtered = utterance[np.argpartition(-utterance.max(axis=1), range(VAD_NFRAMES))[:VAD_NFRAMES]]
-        filtered = select_random_frames(filtered, VAD_NFRAMES)
-    filtered = select_random_frames(filtered, VAD_NFRAMES)
     return filtered
 
 
@@ -44,10 +46,12 @@ def pad_pattern_end(x, l):
     :return: 2-dimensional int numpy array.
     """
     assert len(x) > 0, 'Zero length encountered'
-    x = np.concatenate([x, x[::-1]], axis=0)
-    min_rep = (l + len(x) - 1) // len(x)
-    x = np.concatenate([x] * min_rep, axis=0)
-    x = x[:l]
+    if len(x) < l:
+        x = np.concatenate([x, x[::-1]], axis=0)
+        min_rep = (l + len(x) - 1) // len(x)
+        x = np.concatenate([x] * min_rep, axis=0)
+        x = x[:l]
+    assert len(x) >= l, 'Size of x is wrong!'
     return x
 
 
@@ -60,22 +64,9 @@ def select_random_frames(x, l):
     :param l: l is an integer representing the length of the utterances that the final array should be in.
     :return: 3-dimensional int numpy array of shape (n, l, -1)
     """
-    x = [pad_pattern_end(i, l) for i in x]
-    x = [i[np.random.randint(low=0, high=len(i) - l + 1) if len(i) > l else 0:][:l] for i in x]
+    x = x[np.random.randint(low=0, high=len(x) - l + 1) if len(x) > l else 0:][:l]
     return np.array(x)
 
-
-# data = [
-# [ [1,2], [3,4], [4,5], [5,6], [1,2], [3,4], [4,5], [5,6], [1,2], [3,4], [4,5], [5,6]],
-# [ [1,7], [2,8], [3, 10] ],
-# [ [1,1] ]
-# ]
-# # data = [
-# #     [1,2,3],
-# #     [5,6,]
-# # ]
-# print([len(i) for i in select_random_frames(data, 15)])
-# print(select_random_frames(data, 15))
 
 if __name__ == "__main__":
     # if len(sys.argv) < 3 or sys.argv[2] not in list(map(str, range(1, 7))) + ["dev", "test"]:
