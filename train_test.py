@@ -26,7 +26,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
 
     # switch to train mode
     net.train()
-
+    best_rate = 100
     for i in range(n_iters):
         tic = time.time()
         train_prediction = []
@@ -65,8 +65,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 print(t)
                 logging.info(t)
 
-        # Once every 1 epochs, print validation statistics
-        torch.save(net, 'model.torch')
+        # every 1 epochs, print validation statistics
         epochs_print = 1
         if i % epochs_print == 0:
             with torch.no_grad():
@@ -85,7 +84,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
                     if gpu:
                         val_labels, val_data, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
-                    key_test, key_enrol = trial
+                    key_test, key_enrol = trial[0], trial[1]
                     if key_test in test:
                         embedding_test = enrol[key_test]
                     else:
@@ -118,6 +117,9 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 t = '--------------------------------------------'
                 print(t)
                 logging.info(t)
+                if best_rate > val_eed :
+                    torch.save(net, 'model.torch')
+                    best_rate = val_eed
 
     net = net.cpu()
     return net
@@ -185,7 +187,7 @@ def infer_embeddings(net, layer_name, embedding_size, transform=False, gpu=True)
         for j, (trial, test_labels, test_enrol, test_test) in (enumerate(test_loader)):
             if gpu:
                 test_labels, test_data, test_test = test_labels.cuda(), test_enrol.cuda(), test_test.cuda()
-            key_test, key_enrol = trial
+            key_test, key_enrol = trial[0], trial[1]
             if key_test in test:
                 embedding_test = enrol[key_test]
             else:
