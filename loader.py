@@ -29,32 +29,24 @@ class DataDownload:
     def __init__(self, vad_nframes):
         self.vad_nframes = vad_nframes
 
-    def download(self):
+    def download(self, parts=['A', 'B']):
         if not os.path.exists('./data'):
             os.makedirs('./data')
         print('Downloading tar files...')
-        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_A.tar.gz /data/hw2p2_A.tar.gz',
-                             shell=True)
-        p.wait()
-        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_B.tar.gz /data/hw2p2_B.tar.gz',
-                             shell=True)
-        p.wait()
-        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_C.tar.gz /data/hw2p2_C.tar.gz',
-                             shell=True)
-        p.wait()
+        for file in parts:
+            p = subprocess.Popen(
+                'wget https://11785fall2018.s3.amazonaws.com/hw2p2_{0}.tar.gz -O /data/hw2p2_{0}.tar.gz'.format(file),
+                shell=True)
+            p.wait()
         print('Downloaded files to ./data.')
 
-    def extract(self):
+    def extract(self, parts=['A', 'B'], erase_tar=False):
         print('Extracting tar files...')
-        p = subprocess.Popen('tar -xvzf /data/hw2p2_A.tar.gz --strip 1', shell=True)
-        p.wait()
-        os.remove('./data/hw2p2_A.tar.gz')
-        p = subprocess.Popen('tar -xvzf /data/hw2p2_B.tar.gz --strip 1', shell=True)
-        p.wait()
-        os.remove('./data/hw2p2_B.tar.gz')
-        p = subprocess.Popen('tar -xvzf /data/hw2p2_C.tar.gz --strip 1', shell=True)
-        p.wait()
-        os.remove('./data/hw2p2_C.tar.gz')
+        for file in parts:
+            p = subprocess.Popen('tar -xvzf /data/hw2p2_{}.tar.gz --strip 1'.format(file), shell=True)
+            p.wait()
+            if erase_tar:
+                os.remove('./data/hw2p2_{}.tar.gz'.format(file))
         print('Extracted files to ./data.')
 
     def get_train(self, parts=[1]):
@@ -132,6 +124,7 @@ class UtteranceTestDataset(Dataset):
 
 if __name__ == "__main__":
     import sys
+
     if len(sys.argv) < 3 or sys.argv[2] not in list(map(str, range(1, 7))) + ["dev", "test"]:
         print("Usage:", sys.argv[0], "<path to npz files>", "<chunk among {1, 2, .., 6, dev, test}>")
         exit(0)
