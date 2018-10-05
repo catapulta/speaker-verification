@@ -33,15 +33,18 @@ class DataDownload:
         if not os.path.exists('./data'):
             os.makedirs('./data')
         print('Downloading tar files...')
-        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_A.tar.gz ./data/hw2p2_A.tar.gz',
+        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_A.tar.gz /data/hw2p2_A.tar.gz',
                              shell=True)
         p.wait()
-        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_B.tar.gz ./data/hw2p2_B.tar.gz',
+        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_B.tar.gz /data/hw2p2_B.tar.gz',
                              shell=True)
         p.wait()
-        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_C.tar.gz ./data/hw2p2_C.tar.gz',
+        p = subprocess.Popen('wget https://11785fall2018.s3.amazonaws.com/hw2p2_C.tar.gz /data/hw2p2_C.tar.gz',
                              shell=True)
         p.wait()
+        print('Downloaded files to ./data.')
+
+    def extract(self):
         print('Extracting tar files...')
         p = subprocess.Popen('tar -xvzf /data/hw2p2_A.tar.gz --strip 1 -C data', shell=True)
         p.wait()
@@ -52,7 +55,7 @@ class DataDownload:
         p = subprocess.Popen('tar -xvzf /data/hw2p2_C.tar.gz --strip 1 -C data', shell=True)
         p.wait()
         os.remove('./data/hw2p2_C.tar.gz')
-        print('Download and extraction done to ./data.')
+        print('Extracted files to ./data.')
 
     def get_train(self, parts=[1]):
         for i in parts:
