@@ -87,8 +87,7 @@ class UtteranceTrainDataset(Dataset):
 
     def __getitem__(self, index):
         features = torch.from_numpy(self.features[index]).float()
-        print('XXXXXXXXXXXXXXXX', features.shape)
-        features = features.view(-1, 1, features.shape[0], features.shape[1])
+        features = features.view(1, features.shape[0], features.shape[1])
         labels = torch.from_numpy(np.array(self.labels[index])).long()
         return labels, features
 
