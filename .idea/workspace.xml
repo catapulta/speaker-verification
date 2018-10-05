@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45dce387-5347-4573-a664-39e9e184307c" name="Default Changelist" comment="Add loader&#10;Add preprocessing steps">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess_plus.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess_plus.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,14 +25,14 @@
           <entry key="Python Console" value="140" />
           <entry key="dummy" value="10" />
           <entry key="gitignore" value="16" />
-          <entry key="py" value="6664" />
+          <entry key="py" value="6719" />
           <entry key="txt" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="69" />
-          <entry key="Python" value="6804" />
+          <entry key="Python" value="6859" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -100,16 +96,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+            <state relative-caret-position="181">
+              <caret line="125" column="43" lean-forward="true" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
               <folding>
                 <element signature="e#394#411#0" expanded="true" />
-                <marker date="1538707645746" expanded="true" signature="585:630" ph="..." />
-                <marker date="1538707645746" expanded="true" signature="1839:1845" ph="..." />
-                <marker date="1538707645746" expanded="true" signature="5176:5177" ph="..." />
+                <marker date="1538751893017" expanded="true" signature="585:630" ph="..." />
+                <marker date="1538751893017" expanded="true" signature="1839:1845" ph="..." />
+                <marker date="1538751893017" expanded="true" signature="5176:5177" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="-2573">
               <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
               <folding>
                 <element signature="e#104#115#0" expanded="true" />
@@ -128,7 +124,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -184,8 +180,8 @@
         <option value="$PROJECT_DIR$/preprocess_plus.py" />
         <option value="$PROJECT_DIR$/model.py" />
         <option value="$PROJECT_DIR$/train_test.py" />
-        <option value="$PROJECT_DIR$/loader.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/loader.py" />
       </list>
     </option>
   </component>
@@ -243,7 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train_test">
+  <component name="RunManager" selected="Python.model">
     <configuration name="loader" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="hw2p2-fall18" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -358,8 +354,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.train_test" />
         <item itemvalue="Python.model" />
+        <item itemvalue="Python.train_test" />
         <item itemvalue="Python.loader" />
         <item itemvalue="Python.preprocess_plus" />
         <item itemvalue="Python.torch" />
@@ -453,6 +449,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2573">
+          <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding>
+            <element signature="e#104#115#0" expanded="true" />
+            <marker date="1538707455169" expanded="true" signature="6128:7674" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/preprocess_plus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -465,32 +479,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="16" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        <state relative-caret-position="181">
+          <caret line="125" column="43" lean-forward="true" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
           <folding>
             <element signature="e#394#411#0" expanded="true" />
-            <marker date="1538707645746" expanded="true" signature="585:630" ph="..." />
-            <marker date="1538707645746" expanded="true" signature="1839:1845" ph="..." />
-            <marker date="1538707645746" expanded="true" signature="5176:5177" ph="..." />
+            <marker date="1538751893017" expanded="true" signature="585:630" ph="..." />
+            <marker date="1538751893017" expanded="true" signature="1839:1845" ph="..." />
+            <marker date="1538751893017" expanded="true" signature="5176:5177" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-          <folding>
-            <element signature="e#104#115#0" expanded="true" />
-            <marker date="1538707455169" expanded="true" signature="6128:7674" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
     </entry>

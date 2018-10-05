@@ -40,7 +40,7 @@ def all_cnn_module(nclasses):
     net.append(nn.AvgPool1d(5))
     net.append(Flatten())
 
-    net.append(nn.Linear(192 * 15, 192 * 16))
+    net.append(nn.Linear(192 * 500, 192 * 16))
     net.append(nn.Linear(192 * 16, 100))
     net.append(nn.Linear(100, nclasses))
 
@@ -49,10 +49,8 @@ def all_cnn_module(nclasses):
 
 
 if __name__=='__main__':
-    import torch
-    import numpy as np
     import torchsummary
 
     net = all_cnn_module(127)
     print(net)
-    print(torchsummary.summary(net, (64, 300)))
+    print(torchsummary.summary(net, (64, 10000)))
