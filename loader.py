@@ -46,13 +46,13 @@ class DataDownload:
 
     def extract(self):
         print('Extracting tar files...')
-        p = subprocess.Popen('tar -xvzf /data/hw2p2_A.tar.gz --strip 1 -C data', shell=True)
+        p = subprocess.Popen('tar -xvzf /data/hw2p2_A.tar.gz --strip 1', shell=True)
         p.wait()
         os.remove('./data/hw2p2_A.tar.gz')
-        p = subprocess.Popen('tar -xvzf /data/hw2p2_B.tar.gz --strip 1 -C data', shell=True)
+        p = subprocess.Popen('tar -xvzf /data/hw2p2_B.tar.gz --strip 1', shell=True)
         p.wait()
         os.remove('./data/hw2p2_B.tar.gz')
-        p = subprocess.Popen('tar -xvzf /data/hw2p2_C.tar.gz --strip 1 -C data', shell=True)
+        p = subprocess.Popen('tar -xvzf /data/hw2p2_C.tar.gz --strip 1', shell=True)
         p.wait()
         os.remove('./data/hw2p2_C.tar.gz')
         print('Extracted files to ./data.')
