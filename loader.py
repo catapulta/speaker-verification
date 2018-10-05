@@ -132,6 +132,7 @@ if __name__ == "__main__":
     dl.extract(parts=['A', 'B'], erase_tar=False)
     dl.get_train(parts=[1, 2])
     dl.get_dev()
+    # dl.get_test()
     print('Download and pre-processing successful.')
     # print(UtteranceTrainDataset()[1][1])
     # UtteranceTestDataset()[1]

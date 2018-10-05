@@ -48,8 +48,8 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
             train_observed.append(train_labels)
             torch.cuda.empty_cache()
 
-            # Training print
-            if j % 2 == 0:
+            # training print
+            if j % 2 == 0 and j != 0:
                 t = 'At {:.0f}% of epoch {}'.format(
                     j * train_loader.batch_size / train_loader.dataset.num_entries * 100, i)
                 print(t)
@@ -140,6 +140,7 @@ def train_net(net, layer_name, embedding_size, lr=0.05, n_iters=350, batch_size=
                             pin_memory=True)
 
     net = net(train_loader.dataset.n_labels)
+    net = xavier_init(net)
     net = training_routine(net, n_iters, lr, True, train_loader, val_loader, layer_name, embedding_size)
     return net
 
