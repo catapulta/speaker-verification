@@ -43,51 +43,42 @@ class DataDownload:
                              shell=True)
         p.wait()
         print('Extracting tar files...')
-        p = subprocess.Popen('tar -xvzf ./data/hw2p2_A.tar.gz --strip 1 -C data', shell=True)
+        p = subprocess.Popen('tar -xvzf /data/hw2p2_A.tar.gz --strip 1 -C data', shell=True)
         p.wait()
         os.remove('./data/hw2p2_A.tar.gz')
-        p = subprocess.Popen('tar -xvzf ./data/hw2p2_B.tar.gz --strip 1 -C data', shell=True)
+        p = subprocess.Popen('tar -xvzf /data/hw2p2_B.tar.gz --strip 1 -C data', shell=True)
         p.wait()
         os.remove('./data/hw2p2_B.tar.gz')
-        p = subprocess.Popen('tar -xvzf ./data/hw2p2_C.tar.gz --strip 1 -C data', shell=True)
+        p = subprocess.Popen('tar -xvzf /data/hw2p2_C.tar.gz --strip 1 -C data', shell=True)
         p.wait()
         os.remove('./data/hw2p2_C.tar.gz')
         print('Download and extraction done to ./data.')
 
     def get_train(self, parts=[1]):
         for i in parts:
-            if not os.path.isfile('./data/{}.preprocessed.npz'.format(i)):
-                input_path = './data/{}.npz'.format(i)
-                output_path = './data/{}.preprocessed.npz'.format(i)
-                print('Pre-processing file {}...'.format(i))
-                npz = np.load(input_path, encoding='latin1')
-                np.savez(output_path, feats=preprocess_plus.bulk_VAD(npz['feats'], self.vad_nframes),
-                         targets=npz['targets'])
-            else:
-                print('Pre-processed file {} found.'.format(i))
+            input_path = './data/{}.npz'.format(i)
+            output_path = './data/{}.preprocessed.npz'.format(i)
+            print('Pre-processing file {}...'.format(i))
+            npz = np.load(input_path, encoding='latin1')
+            np.savez(output_path, feats=preprocess_plus.bulk_VAD(npz['feats'], self.vad_nframes),
+                     targets=npz['targets'])
 
     def get_dev(self):
-        if not os.path.isfile('./data/dev.preprocessed.npz'):
-            input_path = './data/dev.npz'
-            output_path = './data/dev.preprocessed.npz'
-            print('Pre-processing dev file...')
-            npz = np.load(input_path, encoding='latin1')
-            np.savez(output_path, enrol=preprocess_plus.bulk_VAD(npz['enrol'], self.vad_nframes),
-                     test=preprocess_plus.bulk_VAD(npz['test'], self.vad_nframes), trials=npz['trials'],
-                     labels=npz['labels'])
-        else:
-            print('Pre-processed dev file found.')
+        input_path = './data/dev.npz'
+        output_path = './data/dev.preprocessed.npz'
+        print('Pre-processing dev file...')
+        npz = np.load(input_path, encoding='latin1')
+        np.savez(output_path, enrol=preprocess_plus.bulk_VAD(npz['enrol'], self.vad_nframes),
+                 test=preprocess_plus.bulk_VAD(npz['test'], self.vad_nframes), trials=npz['trials'],
+                 labels=npz['labels'])
 
     def get_test(self):
-        if not os.path.isfile('./data/test.preprocessed.npz'):
-            input_path = './data/test.npz'
-            output_path = './data/test.preprocessed.npz'
-            print('Pre-processing test file...')
-            npz = np.load(input_path, encoding='latin1')
-            np.savez(output_path, enrol=preprocess_plus.bulk_VAD(npz['enrol'], self.vad_nframes),
-                     test=preprocess_plus.bulk_VAD(npz['test'], self.vad_nframes), trials=npz['trials'])
-        else:
-            print('Pre-processed test file found.')
+        input_path = './data/test.npz'
+        output_path = './data/test.preprocessed.npz'
+        print('Pre-processing test file...')
+        npz = np.load(input_path, encoding='latin1')
+        np.savez(output_path, enrol=preprocess_plus.bulk_VAD(npz['enrol'], self.vad_nframes),
+                 test=preprocess_plus.bulk_VAD(npz['test'], self.vad_nframes), trials=npz['trials'])
 
 
 class UtteranceTrainDataset(Dataset):
@@ -97,6 +88,7 @@ class UtteranceTrainDataset(Dataset):
 
     def __getitem__(self, index):
         features = torch.from_numpy(self.features[index]).float()
+        features = features.view(-1, 1, features.shape[1], features.shape[2])
         labels = torch.from_numpy(np.array(self.labels[index])).long()
         return labels, features
 
@@ -136,7 +128,14 @@ class UtteranceTestDataset(Dataset):
 
 
 if __name__ == "__main__":
-    dl = DataDownload(vad_nframes=10000)
+    import sys
+    if len(sys.argv) < 3 or sys.argv[2] not in list(map(str, range(1, 7))) + ["dev", "test"]:
+        print("Usage:", sys.argv[0], "<path to npz files>", "<chunk among {1, 2, .., 6, dev, test}>")
+        exit(0)
+
+    # path, part = sys.argv[1], sys.argv[2]
+    print('Setting to {} frames.'.format(sys.args[1]))
+    dl = DataDownload(vad_nframes=int(sys.args[1]))
     dl.download()
     dl.get_train()
     dl.get_dev()
