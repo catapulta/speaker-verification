@@ -123,14 +123,6 @@ class UtteranceTestDataset(Dataset):
 
 
 if __name__ == "__main__":
-    import sys
-
-    if len(sys.argv) < 3 or sys.argv[2] not in list(map(str, range(1, 7))) + ["dev", "test"]:
-        print("Usage:", sys.argv[0], "<path to npz files>", "<chunk among {1, 2, .., 6, dev, test}>")
-        exit(0)
-
-    # path, part = sys.argv[1], sys.argv[2]
-    print('Setting to {} frames.'.format(sys.args[1]))
     dl = DataDownload(vad_nframes=10000)
     dl.download(parts=['A', 'B'])
     dl.extract(parts=['A', 'B'], erase_tar=False)
