@@ -35,7 +35,7 @@ class DataDownload:
         print('Downloading tar files...')
         for file in parts:
             p = subprocess.Popen(
-                'wget -O /data/hw2p2_{0}.tar.gz https://11785fall2018.s3.amazonaws.com/hw2p2_{0}.tar.gz'.format(file),
+                'wget --directory-prefix=/data https://11785fall2018.s3.amazonaws.com/hw2p2_{0}.tar.gz'.format(file),
                 shell=True)
             p.wait()
         print('Downloaded files to ./data.')
