@@ -39,15 +39,18 @@ class DataDownload:
                 'wget https://11785fall2018.s3.amazonaws.com/hw2p2_{0}.tar.gz'.format(file),
                 shell=True)
             p.wait()
+        os.chdir('..')
         print('Downloaded files to ./data.')
 
     def extract(self, parts=['A', 'B'], erase_tar=False):
         print('Extracting tar files...')
+        os.chdir('./data')
         for file in parts:
-            p = subprocess.Popen('tar -xvzf /data/hw2p2_{}.tar.gz --strip 1'.format(file), shell=True)
+            p = subprocess.Popen('tar -xvzf hw2p2_{}.tar.gz --strip 1'.format(file), shell=True)
             p.wait()
             if erase_tar:
-                os.remove('./data/hw2p2_{}.tar.gz'.format(file))
+                os.remove('hw2p2_{}.tar.gz'.format(file))
+        os.chdir('..')
         print('Extracted files to ./data.')
 
     def get_train(self, parts=[1]):
