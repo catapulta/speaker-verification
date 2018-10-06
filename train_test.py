@@ -33,6 +33,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
         train_observed = []
         for j, (train_labels, train_data) in enumerate(train_loader):
             if gpu:
+                net.cuda()
                 train_labels, train_data, net = train_labels.cuda(), train_data.cuda(), net.cuda()
             # forward pass
             train_output = net(train_data)
@@ -83,6 +84,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 test = {}
                 for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
                     if gpu:
+                        net.cuda()
                         val_labels, val_data, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
                     key_test, key_enrol = trial[0], trial[1]
                     if key_test in test:
@@ -186,6 +188,7 @@ def infer_embeddings(net, layer_name, embedding_size, transform=False, gpu=True)
         test = {}
         for j, (trial, test_labels, test_enrol, test_test) in (enumerate(test_loader)):
             if gpu:
+                net.cuda()
                 test_labels, test_data, test_test = test_labels.cuda(), test_enrol.cuda(), test_test.cuda()
             key_test, key_enrol = trial[0], trial[1]
             if key_test in test:
@@ -221,6 +224,7 @@ def infer_net(net, test_loader, gpu):
         test_prediction = []
         for j, test_data in enumerate(test_loader):
             if gpu:
+                net.cuda()
                 test_data = test_data.cuda()
             test_output = net(test_data).cpu().argmax(dim=1).detach().numpy()
             test_prediction.append(test_output)
