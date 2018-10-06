@@ -85,8 +85,8 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
                     if gpu:
                         net.cuda()
-                        val_labels, val_data, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
-                    key_test, key_enrol = trial[0], trial[1]
+                        val_labels, val_enrol, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
+                    key_enrol, key_test = trial[0], trial[1]
                     if key_test in test:
                         embedding_test = enrol[key_test]
                     else:
@@ -119,9 +119,9 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 t = '--------------------------------------------'
                 print(t)
                 logging.info(t)
-                if best_rate > val_eed :
+                if best_rate > val_eed[0]:
                     torch.save(net, 'model.torch')
-                    best_rate = val_eed
+                    best_rate = val_eed[0]
 
     net = net.cpu()
     return net
@@ -167,8 +167,8 @@ def extract_embedding(x, net, layer_name, embedding_size):
     return embedding
 
 
-def infer_embeddings(net, layer_name, embedding_size, transform=False, gpu=True):
-    test_dataset = loader.UtteranceDataset(data_type='test', transform=transform)
+def infer_embeddings(net, layer_name, embedding_size, gpu=True):
+    test_dataset = loader.UtteranceTestDataset()
 
     test_loader = DataLoader(dataset=test_dataset,
                              batch_size=100,
@@ -183,14 +183,13 @@ def infer_embeddings(net, layer_name, embedding_size, transform=False, gpu=True)
         print('Not using GPU for testing.')
     with torch.no_grad():
         test_prediction = []
-        test_observed = []
         enrol = {}
         test = {}
-        for j, (trial, test_labels, test_enrol, test_test) in (enumerate(test_loader)):
+        for j, (trial, test_enrol, test_test) in (enumerate(test_loader)):
             if gpu:
                 net.cuda()
-                test_labels, test_data, test_test = test_labels.cuda(), test_enrol.cuda(), test_test.cuda()
-            key_test, key_enrol = trial[0], trial[1]
+                test_enrol, test_test = test_enrol.cuda(), test_test.cuda()
+            key_enrol, key_test = trial[0], trial[1]
             if key_test in test:
                 embedding_test = enrol[key_test]
             else:
@@ -204,14 +203,10 @@ def infer_embeddings(net, layer_name, embedding_size, transform=False, gpu=True)
             cos = torch.nn.CosineSimilarity()
             test_output = cos(embedding_test, embedding_enrol)
             test_prediction.append(test_output.cpu().numpy())
-            test_labels = test_labels.cpu().numpy()
-            test_observed.append(test_labels)
         test_prediction = np.concatenate(test_prediction)
-        test_observed = np.concatenate(test_observed)
         # compute the accuracy of the prediction
-        test_eed = utils.EER(test_observed, test_prediction)
 
-    return test_eed
+    return test_prediction
 
 
 def infer_net(net, test_loader, gpu):
@@ -219,8 +214,6 @@ def infer_net(net, test_loader, gpu):
     if not gpu:
         print('Not using GPU for testing.')
     with torch.no_grad():
-        # compute the accuracy of the prediction
-        # Now for the validation set
         test_prediction = []
         for j, test_data in enumerate(test_loader):
             if gpu:
@@ -279,6 +272,8 @@ if __name__ == '__main__':
     import utils
 
     # all_cnn = train_net(net=model.all_cnn_module, lr=0.1, n_iters=350, batch_size=150, num_workers=4)
-    all_cnn = train_net(layer_name='24', embedding_size=100, net=model.all_cnn_module, lr=0.005, n_iters=1,
+    all_cnn = train_net(layer_name='5', embedding_size=100, net=model.all_cnn_module, lr=0.005, n_iters=1,
                         batch_size=20, num_workers=1)
-    # write_results(test_prediction)
+    pred_similarities = infer_embeddings(all_cnn, layer_name='5', embedding_size=100, gpu=True)
+    print(pred_similarities.shape)
+    write_results(pred_similarities)

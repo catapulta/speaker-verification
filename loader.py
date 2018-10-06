@@ -114,27 +114,29 @@ class UtteranceValidationDataset(Dataset):
 
 
 class UtteranceTestDataset(Dataset):
-    def __init__(self, path='./data'):
+    def __init__(self, path='./data/test.preprocessed.npz'):
         self.trials, self.enrol, self.test = utils.test_load(path)
         self.num_entries = len(self.trials)
 
     def __getitem__(self, index):
         trial = self.trials[index]
         enrol = torch.from_numpy(self.enrol[trial[0]]).float()
+        enrol = enrol.view(1, enrol.shape[0], enrol.shape[1])
         test = torch.from_numpy(self.test[trial[1]]).float()
-        return enrol, test
+        test = test.view(1, test.shape[0], test.shape[1])
+        return trial, enrol, test
 
     def __len__(self):
         return self.num_entries
 
 
 if __name__ == "__main__":
-    dl = DataDownload(vad_nframes=9984)
-    dl.download(parts=['A', 'B'])
-    dl.extract(parts=['A', 'B'], erase_tar=False)
-    dl.get_train(parts=[1, 2])
-    dl.get_dev()
-    # dl.get_test()
+    dl = DataDownload(vad_nframes=50)
+    # dl.download(parts=['A', 'B'])
+    # dl.extract(parts=['C'], erase_tar=False)
+    # dl.get_train(parts=[1])
+    # dl.get_dev()
+    dl.get_test()
     print('Download and pre-processing successful.')
     # print(UtteranceTrainDataset()[1][1])
     # UtteranceTestDataset()[1]

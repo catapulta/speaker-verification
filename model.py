@@ -13,6 +13,14 @@ class Flatten(nn.Module):
 def all_cnn_module(nclasses):
     net = []
 
+    # net.append(nn.Dropout(0.2))
+    # net.append(nn.Conv2d(in_channels=1, out_channels=1, kernel_size=7, stride=(4, 5), padding=3, dilation=1, groups=1))
+    # net.append(nn.ReLU())
+    # net.append(nn.AvgPool2d((1, 6)))
+    # net.append(Flatten())
+    # net.append(nn.Linear(16, 100))
+    # net.append(nn.Linear(100, nclasses))
+
     net.append(nn.Dropout(0.2))
     net.append(nn.Conv2d(in_channels=1, out_channels=96, kernel_size=7, stride=(1, 4), padding=3, dilation=1, groups=1))
     net.append(nn.ReLU())
@@ -60,3 +68,4 @@ if __name__=='__main__':
     net = all_cnn_module(127)
     print(net)
     print(torchsummary.summary(net, (1, 64, 9984)))
+    # print(torchsummary.summary(net, (1, 64, 50)))
