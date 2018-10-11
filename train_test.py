@@ -4,7 +4,6 @@ Refer to handout for details.
 - Submit your code to Autolab
 """
 import time
-
 import numpy as np
 import torch
 import torch.nn as nn
@@ -20,9 +19,12 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
     import logging
     logging.basicConfig(filename='train.log', level=logging.DEBUG)
     criterion = nn.CrossEntropyLoss()
-    # optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9)
-    optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=0.001)
+    # optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-5)
+    optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=1e-5)
     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[200, 250, 300], gamma=0.1)
+    if gpu:
+        net.cuda()
+        train_labels, train_data = train_labels.cuda(), train_data.cuda()
 
     # switch to train mode
     net.train()
@@ -33,15 +35,14 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
         train_observed = []
         for j, (train_labels, train_data) in enumerate(train_loader):
             if gpu:
-                net.cuda()
-                train_labels, train_data, net = train_labels.cuda(), train_data.cuda(), net.cuda()
+                train_labels, train_data = train_labels.cuda(), train_data.cuda()
             # forward pass
+            print(train_data.shape)
             train_output = net(train_data)
             train_loss = criterion(train_output, train_labels)
             # backward pass and optimization
             optimizer.zero_grad()
             train_loss.backward()
-            scheduler.step()
             optimizer.step()
             train_output = train_output.cpu().argmax(dim=1).detach().numpy()
             train_prediction.append(train_output)
@@ -66,6 +67,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 print(t)
                 logging.info(t)
 
+        scheduler.step()
         # every 1 epochs, print validation statistics
         epochs_print = 1
         if i % epochs_print == 0:
@@ -84,7 +86,6 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 test = {}
                 for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
                     if gpu:
-                        net.cuda()
                         val_labels, val_enrol, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
                     key_enrol, key_test = trial[0], trial[1]
                     if key_test in test:
@@ -271,9 +272,8 @@ if __name__ == '__main__':
     import model
     import utils
 
-    # all_cnn = train_net(net=model.all_cnn_module, lr=0.1, n_iters=350, batch_size=150, num_workers=4)
-    all_cnn = train_net(layer_name='5', embedding_size=100, net=model.all_cnn_module, lr=0.005, n_iters=1,
-                        batch_size=20, num_workers=1)
+    all_cnn = train_net(layer_name='5', embedding_size=100, net=model.test_module, lr=0.005, n_iters=1, batch_size=20, num_workers=1)
+    # all_cnn = train_net(layer_name='30', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_iters=500, batch_size=150, num_workers=4)
     pred_similarities = infer_embeddings(all_cnn, layer_name='5', embedding_size=100, gpu=True)
     print(pred_similarities.shape)
     write_results(pred_similarities)
