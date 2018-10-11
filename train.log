@@ -1,250 +1,53 @@
-INFO:root:At 3% of epoch 0
-INFO:root:Training loss : 17.11736488342285
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
 INFO:root:At 7% of epoch 0
-INFO:root:Training loss : 15.865814208984375
+INFO:root:Training loss : 8.319923400878906
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 10% of epoch 0
-INFO:root:Training loss : 10.163348197937012
+INFO:root:At 14% of epoch 0
+INFO:root:Training loss : 7.640960693359375
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 13% of epoch 0
-INFO:root:Training loss : 12.267187118530273
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 17% of epoch 0
-INFO:root:Training loss : 11.5071382522583
+INFO:root:At 22% of epoch 0
+INFO:root:Training loss : 6.2035112380981445
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 20% of epoch 0
-INFO:root:Training loss : 10.773210525512695
+INFO:root:At 29% of epoch 0
+INFO:root:Training loss : 6.562872886657715
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 23% of epoch 0
-INFO:root:Training loss : 10.999483108520508
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 27% of epoch 0
-INFO:root:Training loss : 9.36304759979248
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 30% of epoch 0
-INFO:root:Training loss : 8.7855806350708
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 33% of epoch 0
-INFO:root:Training loss : 8.51322078704834
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 37% of epoch 0
-INFO:root:Training loss : 5.755329608917236
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 40% of epoch 0
-INFO:root:Training loss : 6.111098766326904
-INFO:root:Training accuracy 0.1:
-INFO:root:--------------------------------------------
-INFO:root:At 43% of epoch 0
-INFO:root:Training loss : 6.650834560394287
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 47% of epoch 0
-INFO:root:Training loss : 6.760632514953613
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 50% of epoch 0
-INFO:root:Training loss : 5.542396545410156
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 53% of epoch 0
-INFO:root:Training loss : 7.128823280334473
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 57% of epoch 0
-INFO:root:Training loss : 5.990828037261963
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 60% of epoch 0
-INFO:root:Training loss : 5.681303024291992
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 63% of epoch 0
-INFO:root:Training loss : 6.67270040512085
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 67% of epoch 0
-INFO:root:Training loss : 6.560173034667969
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 70% of epoch 0
-INFO:root:Training loss : 5.669911861419678
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 73% of epoch 0
-INFO:root:Training loss : 6.677548885345459
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 77% of epoch 0
-INFO:root:Training loss : 5.03740119934082
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 80% of epoch 0
-INFO:root:Training loss : 5.426915168762207
-INFO:root:Training accuracy 0.1:
-INFO:root:--------------------------------------------
-INFO:root:At 83% of epoch 0
-INFO:root:Training loss : 4.685128688812256
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 87% of epoch 0
-INFO:root:Training loss : 5.456408500671387
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 90% of epoch 0
-INFO:root:Training loss : 6.1306986808776855
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 93% of epoch 0
-INFO:root:Training loss : 5.012909412384033
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 97% of epoch 0
-INFO:root:Training loss : 5.231293678283691
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 100% of epoch 0
-INFO:root:Training loss : 3.807598829269409
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:#########  Epoch 0 #########
-INFO:root:Training accuracy : 0.01747088186356073
-INFO:root:Validation EER (0.48418024928091774, array(0.29603298226880165)):
-INFO:root:Took: 4.222167015075684
-INFO:root:--------------------------------------------
-INFO:root:At 3% of epoch 0
-INFO:root:Training loss : 16.31435775756836
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 7% of epoch 0
-INFO:root:Training loss : 10.2909574508667
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 10% of epoch 0
-INFO:root:Training loss : 12.440342903137207
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 13% of epoch 0
-INFO:root:Training loss : 10.991060256958008
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 17% of epoch 0
-INFO:root:Training loss : 9.554834365844727
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 20% of epoch 0
-INFO:root:Training loss : 9.002123832702637
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 23% of epoch 0
-INFO:root:Training loss : 8.3096284866333
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 27% of epoch 0
-INFO:root:Training loss : 8.450033187866211
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 30% of epoch 0
-INFO:root:Training loss : 7.454682350158691
-INFO:root:Training accuracy 0.1:
-INFO:root:--------------------------------------------
-INFO:root:At 33% of epoch 0
-INFO:root:Training loss : 7.366896629333496
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 37% of epoch 0
-INFO:root:Training loss : 7.7426605224609375
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 40% of epoch 0
-INFO:root:Training loss : 6.609158515930176
+INFO:root:At 36% of epoch 0
+INFO:root:Training loss : 6.234527587890625
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
 INFO:root:At 43% of epoch 0
-INFO:root:Training loss : 6.3880085945129395
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 47% of epoch 0
-INFO:root:Training loss : 6.810763359069824
+INFO:root:Training loss : 6.1777238845825195
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
 INFO:root:At 50% of epoch 0
-INFO:root:Training loss : 5.752111434936523
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 53% of epoch 0
-INFO:root:Training loss : 5.6089019775390625
+INFO:root:Training loss : 5.878007411956787
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 57% of epoch 0
-INFO:root:Training loss : 5.3917388916015625
+INFO:root:At 58% of epoch 0
+INFO:root:Training loss : 6.089095592498779
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 60% of epoch 0
-INFO:root:Training loss : 5.811311721801758
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 63% of epoch 0
-INFO:root:Training loss : 8.002589225769043
+INFO:root:At 65% of epoch 0
+INFO:root:Training loss : 6.02353048324585
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 67% of epoch 0
-INFO:root:Training loss : 4.987796306610107
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 70% of epoch 0
-INFO:root:Training loss : 4.536210060119629
-INFO:root:Training accuracy 0.05:
-INFO:root:--------------------------------------------
-INFO:root:At 73% of epoch 0
-INFO:root:Training loss : 5.439232349395752
+INFO:root:At 72% of epoch 0
+INFO:root:Training loss : 6.0255866050720215
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 77% of epoch 0
-INFO:root:Training loss : 4.546494483947754
-INFO:root:Training accuracy 0.1:
-INFO:root:--------------------------------------------
-INFO:root:At 80% of epoch 0
-INFO:root:Training loss : 5.164903163909912
+INFO:root:At 79% of epoch 0
+INFO:root:Training loss : 6.050638198852539
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 83% of epoch 0
-INFO:root:Training loss : 4.9855570793151855
+INFO:root:At 86% of epoch 0
+INFO:root:Training loss : 5.92304801940918
 INFO:root:Training accuracy 0.0:
 INFO:root:--------------------------------------------
-INFO:root:At 87% of epoch 0
-INFO:root:Training loss : 4.746656894683838
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 90% of epoch 0
-INFO:root:Training loss : 5.6268720626831055
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 93% of epoch 0
-INFO:root:Training loss : 5.314653396606445
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 97% of epoch 0
-INFO:root:Training loss : 4.741936683654785
-INFO:root:Training accuracy 0.0:
-INFO:root:--------------------------------------------
-INFO:root:At 100% of epoch 0
-INFO:root:Training loss : 8.790489196777344
-INFO:root:Training accuracy 0.0:
+INFO:root:At 94% of epoch 0
+INFO:root:Training loss : 6.028378486633301
+INFO:root:Training accuracy 0.08:
 INFO:root:--------------------------------------------
 INFO:root:#########  Epoch 0 #########
-INFO:root:Training accuracy : 0.014975041597337771
-INFO:root:Validation EER (0.48036758563128507, array(0.25041705369900574)):
-INFO:root:Took: 4.158558130264282
-INFO:root:--------------------------------------------

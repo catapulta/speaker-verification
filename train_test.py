@@ -24,7 +24,6 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[200, 250, 300], gamma=0.1)
     if gpu:
         net.cuda()
-        train_labels, train_data = train_labels.cuda(), train_data.cuda()
 
     # switch to train mode
     net.train()
@@ -37,7 +36,6 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
             if gpu:
                 train_labels, train_data = train_labels.cuda(), train_data.cuda()
             # forward pass
-            print(train_data.shape)
             train_output = net(train_data)
             train_loss = criterion(train_output, train_labels)
             # backward pass and optimization
@@ -51,7 +49,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
             torch.cuda.empty_cache()
 
             # training print
-            if j % 2 == 0 and j != 0:
+            if j % 10 == 0 and j != 0:
                 t = 'At {:.0f}% of epoch {}'.format(
                     j * train_loader.batch_size / train_loader.dataset.num_entries * 100, i)
                 print(t)
@@ -128,8 +126,8 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
     return net
 
 
-def train_net(net, layer_name, embedding_size, lr=0.05, n_iters=350, batch_size=100, num_workers=4):
-    train_dataset = loader.UtteranceTrainDataset()
+def train_net(net, layer_name, embedding_size, parts, lr=0.05, n_iters=350, batch_size=100, num_workers=4):
+    train_dataset = loader.UtteranceTrainDataset(parts=parts)
 
     train_loader = DataLoader(dataset=train_dataset,
                               batch_size=batch_size,
@@ -272,7 +270,7 @@ if __name__ == '__main__':
     import model
     import utils
 
-    all_cnn = train_net(layer_name='5', embedding_size=100, net=model.test_module, lr=0.005, n_iters=1, batch_size=20, num_workers=1)
+    all_cnn = train_net(layer_name='5', embedding_size=100, parts=[1], net=model.test_module, lr=0.005, n_iters=1, batch_size=20, num_workers=1)
     # all_cnn = train_net(layer_name='30', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_iters=500, batch_size=150, num_workers=4)
     pred_similarities = infer_embeddings(all_cnn, layer_name='5', embedding_size=100, gpu=True)
     print(pred_similarities.shape)
