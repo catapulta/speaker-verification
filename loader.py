@@ -137,13 +137,20 @@ class UtteranceTestDataset(Dataset):
 
 
 if __name__ == "__main__":
-    dl = DataDownload(vad_nframes=50)
+    # dl = DataDownload(vad_nframes=50)
     # dl.download(parts=['A', 'B'])
     # dl.extract(parts=['C'], erase_tar=False)
     # dl.get_train(parts=[1])
     # dl.get_dev()
     # dl.get_test()
     # print('Download and pre-processing successful.')
-    print(UtteranceTrainDataset(utterance_size=20)[1][1].shape)
-    print(UtteranceValidationDataset(utterance_size=20)[1][2].shape)
-    print(UtteranceTestDataset(utterance_size=20)[1][2].shape)
+    #print(UtteranceTrainDataset(utterance_size=20)[1][1].shape)
+    #print(UtteranceValidationDataset(utterance_size=20)[1][2].shape)
+    #print(UtteranceTestDataset(utterance_size=20)[1][2].shape)
+
+    dl = DataDownload(vad_nframes=10000)
+    #dl.download(parts=['A', 'B', 'C'])
+    #dl.extract(parts=['A', 'B', 'C'], erase_tar=True)
+    dl.get_train(parts=[ 5, 6])
+    dl.get_dev()
+    dl.get_test()
