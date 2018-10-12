@@ -18,7 +18,8 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
         print('Not using GPU.')
     import logging
     logging.basicConfig(filename='train.log', level=logging.DEBUG)
-    criterion = nn.CrossEntropyLoss()
+    # criterion = nn.CrossEntropyLoss()
+    criterion = net_sphere.AngleLoss()
     # optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-5)
     optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=1e-5)
     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[200, 250, 300], gamma=0.1)
@@ -126,8 +127,8 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
     return net
 
 
-def train_net(net, layer_name, embedding_size, parts, lr=0.05, n_iters=350, batch_size=100, num_workers=4):
-    train_dataset = loader.UtteranceTrainDataset(parts=parts)
+def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained_path=None, lr=0.05, n_iters=350, batch_size=100, num_workers=4):
+    train_dataset = loader.UtteranceTrainDataset(parts=parts, utterance_size=utterance_size)
 
     train_loader = DataLoader(dataset=train_dataset,
                               batch_size=batch_size,
@@ -135,7 +136,7 @@ def train_net(net, layer_name, embedding_size, parts, lr=0.05, n_iters=350, batc
                               num_workers=num_workers,
                               pin_memory=True)
 
-    val_dataset = loader.UtteranceValidationDataset()
+    val_dataset = loader.UtteranceValidationDataset(utterance_size=utterance_size)
     val_loader = DataLoader(dataset=val_dataset,
                             batch_size=batch_size,
                             shuffle=False,
@@ -143,7 +144,10 @@ def train_net(net, layer_name, embedding_size, parts, lr=0.05, n_iters=350, batc
                             pin_memory=True)
 
     net = net(train_loader.dataset.n_labels)
-    net = xavier_init(net)
+    if pretrained_path is not None:
+        net.load_state_dict(torch.load(pretrained_path))
+    else:
+        net = xavier_init(net)
     net = training_routine(net, n_iters, lr, True, train_loader, val_loader, layer_name, embedding_size)
     return net
 
@@ -166,8 +170,8 @@ def extract_embedding(x, net, layer_name, embedding_size):
     return embedding
 
 
-def infer_embeddings(net, layer_name, embedding_size, gpu=True):
-    test_dataset = loader.UtteranceTestDataset()
+def infer_embeddings(net, layer_name, embedding_size, utterance_size, gpu=True):
+    test_dataset = loader.UtteranceTestDataset(utterance_size=utterance_size)
 
     test_loader = DataLoader(dataset=test_dataset,
                              batch_size=100,
@@ -269,9 +273,9 @@ def xavier_init(model):
 if __name__ == '__main__':
     import model
     import utils
+    import net_sphere
 
-    all_cnn = train_net(layer_name='5', embedding_size=100, parts=[1], net=model.test_module, lr=0.005, n_iters=1, batch_size=20, num_workers=1)
+    all_cnn = train_net(layer_name='Linear-41', pretrained_path='./data/sphere20a20171020.pth', embedding_size=512, parts=[1], utterance_size=384, net=net_sphere.sphere20a, lr=0.005, n_iters=1, batch_size=20, num_workers=4)
     # all_cnn = train_net(layer_name='30', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_iters=500, batch_size=150, num_workers=4)
-    pred_similarities = infer_embeddings(all_cnn, layer_name='5', embedding_size=100, gpu=True)
-    print(pred_similarities.shape)
+    pred_similarities = infer_embeddings(all_cnn, layer_name='Linear-41', utterance_size=20, embedding_size='Linear-41', gpu=True)
     write_results(pred_similarities)

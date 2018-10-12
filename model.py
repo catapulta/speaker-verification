@@ -13,11 +13,11 @@ def test_module(nclasses):
     net = []
 
     net.append(nn.Dropout(0.2))
-    net.append(nn.Conv2d(in_channels=1, out_channels=1, kernel_size=7, stride=(4, 5), padding=3, dilation=1, groups=1))
+    net.append(nn.Conv2d(in_channels=1, out_channels=1, kernel_size=3, stride=1, padding=1, dilation=1, groups=1))
     net.append(nn.ReLU())
     net.append(nn.AvgPool2d((1, 6)))
     net.append(Flatten())
-    net.append(nn.Linear(16, 100))
+    net.append(nn.Linear(192, 100))
     net.append(nn.Linear(100, nclasses))
     net = nn.Sequential(*net)
     return net
@@ -57,10 +57,10 @@ def all_cnn_module(nclasses):
     net.append(nn.AvgPool2d((5, 1)))
     net.append(Flatten())
 
-    net.append(nn.Linear(1440, 1440 * 2))
-    net.append(nn.Linear(1440 * 2, 192 * 2))
-    net.append(nn.Linear(192 * 2, 100))
-    net.append(nn.Linear(100, nclasses))
+    # net.append(nn.Linear(1440, 1440 * 2))
+    # net.append(nn.Linear(1440 * 2, 192 * 2))
+    # net.append(nn.Linear(192 * 2, 100))
+    # net.append(nn.Linear(100, nclasses))
 
     net = nn.Sequential(*net)
     return net
@@ -68,8 +68,13 @@ def all_cnn_module(nclasses):
 
 if __name__=='__main__':
     import torchsummary
+    import net_sphere
 
-    net = all_cnn_module(127)
-    print(net)
-    print(torchsummary.summary(net, (1, 64, 9984)))
-    # print(torchsummary.summary(net, (1, 64, 50)))
+    # net = all_cnn_module(127)
+    # print(torchsummary.summary(net, (1, 64, 384)))
+
+    # net = test_module(127)
+    # print(torchsummary.summary(net, (1, 64, 384)))
+
+    net = net_sphere.sphere20a(127)
+    print(torchsummary.summary(net, (1, 64, 384)))

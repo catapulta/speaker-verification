@@ -81,8 +81,10 @@ class DataDownload:
 
 
 class UtteranceTrainDataset(Dataset):
-    def __init__(self, path='./data', parts=[1], transform=False):
+    def __init__(self, path='./data', parts=[1], utterance_size=384):
+        self.utterance_size = utterance_size
         self.features, self.labels, self.n_labels = utils.train_load(path, parts)
+        self.features = [preprocess_plus.select_random_frames(x.squeeze().T, utterance_size).T for x in self.features]
         self.num_entries = len(self.features)
 
     def __getitem__(self, index):
@@ -96,8 +98,10 @@ class UtteranceTrainDataset(Dataset):
 
 
 class UtteranceValidationDataset(Dataset):
-    def __init__(self, path='./data/dev.preprocessed.npz'):
+    def __init__(self, path='./data/dev.preprocessed.npz', utterance_size=384):
         self.trials, self.labels, self.enrol, self.test = utils.dev_load(path)
+        self.enrol = [preprocess_plus.select_random_frames(x.T, utterance_size).T for x in self.enrol]
+        self.test = [preprocess_plus.select_random_frames(x.T, utterance_size).T for x in self.test]
         self.num_entries = len(self.labels)
 
     def __getitem__(self, index):
@@ -114,8 +118,10 @@ class UtteranceValidationDataset(Dataset):
 
 
 class UtteranceTestDataset(Dataset):
-    def __init__(self, path='./data/test.preprocessed.npz'):
+    def __init__(self, path='./data/test.preprocessed.npz', utterance_size=384):
         self.trials, self.enrol, self.test = utils.test_load(path)
+        self.enrol = [preprocess_plus.select_random_frames(x.squeeze().T, utterance_size).T for x in self.enrol]
+        self.test = [preprocess_plus.select_random_frames(x.squeeze().T, utterance_size).T for x in self.test]
         self.num_entries = len(self.trials)
 
     def __getitem__(self, index):
@@ -136,8 +142,8 @@ if __name__ == "__main__":
     # dl.extract(parts=['C'], erase_tar=False)
     # dl.get_train(parts=[1])
     # dl.get_dev()
-    dl.get_test()
-    print('Download and pre-processing successful.')
-    # print(UtteranceTrainDataset()[1][1])
-    # UtteranceTestDataset()[1]
-    # print(UtteranceValidationDataset()[1][2])
+    # dl.get_test()
+    # print('Download and pre-processing successful.')
+    print(UtteranceTrainDataset(utterance_size=20)[1][1].shape)
+    print(UtteranceValidationDataset(utterance_size=20)[1][2].shape)
+    print(UtteranceTestDataset(utterance_size=20)[1][2].shape)

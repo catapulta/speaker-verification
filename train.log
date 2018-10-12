@@ -51,3 +51,32 @@ INFO:root:Training loss : 6.028378486633301
 INFO:root:Training accuracy 0.08:
 INFO:root:--------------------------------------------
 INFO:root:#########  Epoch 0 #########
+INFO:root:At 17% of epoch 0
+INFO:root:Training loss : 27.34507179260254
+INFO:root:Training accuracy 0.0:
+INFO:root:--------------------------------------------
+INFO:root:At 33% of epoch 0
+INFO:root:Training loss : 33.69550323486328
+INFO:root:Training accuracy 0.0:
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 22.767580032348633
+INFO:root:Training accuracy 0.05:
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 0
+INFO:root:Training loss : 21.216815948486328
+INFO:root:Training accuracy 0.0:
+INFO:root:--------------------------------------------
+INFO:root:At 83% of epoch 0
+INFO:root:Training loss : 19.198287963867188
+INFO:root:Training accuracy 0.0:
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 21.24282455444336
+INFO:root:Training accuracy 0.0:
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:Training accuracy : 0.021630615640599003
+INFO:root:Validation EER (0.4606903163950142, array(0.3900417282810681)):
+INFO:root:Took: 5.068905830383301
+INFO:root:--------------------------------------------
