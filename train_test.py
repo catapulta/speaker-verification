@@ -150,28 +150,9 @@ def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained
                             num_workers=num_workers,
                             pin_memory=True)
 
-    def load_my_state_dict(net, state_dict):
- 
-        own_state = net.state_dict()
-        for name, param in state_dict.items():
-            if name not in own_state:
-                continue
-            if isinstance(param, nn.Parameter):
-                # backwards compatibility for serialized parameters
-                param = param.data
-            own_state[name].copy_(param)
-        return net
-
     net = net(train_loader.dataset.n_labels)
     if pretrained_path is not None:
         pretrained_dict = torch.load(pretrained_path)
-        #model_dict = net.state_dict()
-        # 1. filter out unnecessary keys
-        #pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
-        # 2. overwrite entries in the existing state dict
-        #model_dict.update(pretrained_dict) 
-        # 3. load the new state dict
-        #net.load_state_dict(pretrained_dict)
         net = load_my_state_dict(net, pretrained_dict)
         print('Loaded pre-trained weights.')
     else:
@@ -297,13 +278,29 @@ def xavier_init(model):
                 nn.init.constant_(module.bias, 0.01)
     return model
 
+def load_my_state_dict(net, state_dict):
+
+    own_state = net.state_dict()
+    for name, param in state_dict.items():
+        if name not in own_state:
+            continue
+        if isinstance(param, nn.Parameter):
+            # backwards compatibility for serialized parameters
+            param = param.data
+        own_state[name].copy_(param)
+    return net
+
 
 if __name__ == '__main__':
     import model
     import utils
     import net_sphere
 
-    all_cnn = train_net(layer_name='Linear-41', pretrained_path='./data/sphere20a20171020.pth', embedding_size=512, parts=[1], utterance_size=384, net=net_sphere.sphere20a, lr=0.005, n_iters=1, batch_size=20, num_workers=4)
+    # all_cnn = train_net(layer_name='Linear-41', pretrained_path='./model-big-resnet.pth', embedding_size=512, parts=[1], utterance_size=384, net=net_sphere.sphere20a, lr=0.000005, n_iters=1, batch_size=1, num_workers=1)
     # all_cnn = train_net(layer_name='30', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_iters=500, batch_size=150, num_workers=4)
-    pred_similarities = infer_embeddings(all_cnn, layer_name='Linear-41', utterance_size=20, embedding_size='Linear-41', gpu=True)
+    # pred_similarities = infer_embeddings(all_cnn, layer_name='Linear-41', utterance_size=384, embedding_size=512, gpu=True)
+
+    all_cnn = train_net(layer_name='Linear-7', pretrained_path=None, embedding_size=100, parts=[1], utterance_size=384, net=model.test_module, lr=0.005, n_iters=350, batch_size=20, num_workers=1)
+    pred_similarities = infer_embeddings(all_cnn, layer_name='Linear-7', utterance_size=20, embedding_size=512, gpu=True)
+
     write_results(pred_similarities)

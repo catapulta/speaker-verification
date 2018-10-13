@@ -13,12 +13,14 @@ def test_module(nclasses):
     net = []
 
     net.append(nn.Dropout(0.2))
-    net.append(nn.Conv2d(in_channels=1, out_channels=1, kernel_size=3, stride=1, padding=1, dilation=1, groups=1))
+    net.append(nn.Conv2d(in_channels=1, out_channels=1, kernel_size=3, stride=1, padding=0, dilation=1, groups=1))
     net.append(nn.ReLU())
     net.append(nn.AvgPool2d((1, 6)))
     net.append(Flatten())
-    net.append(nn.Linear(192, 100))
+    net.append(nn.Dropout(0.4))
+    net.append(nn.Linear(3906, 100))
     net.append(nn.Linear(100, nclasses))
+
     net = nn.Sequential(*net)
     return net
 
@@ -73,8 +75,8 @@ if __name__=='__main__':
     # net = all_cnn_module(127)
     # print(torchsummary.summary(net, (1, 64, 384)))
 
-    # net = test_module(127)
-    # print(torchsummary.summary(net, (1, 64, 384)))
-
-    net = net_sphere.sphere20a(127)
+    net = test_module(127)
     print(torchsummary.summary(net, (1, 64, 384)))
+
+    # net = net_sphere.sphere20a(127)
+    # print(torchsummary.summary(net, (1, 64, 384)))
