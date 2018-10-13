@@ -15,24 +15,29 @@ class Tester(nn.Module):
     def __init__(self, nclasses):
         super(Tester, self).__init__()
         self.nclasses = nclasses
-        self.drop1 = nn.Dropout(0.2)
-        self.conv1 = nn.Conv2d(in_channels=1, out_channels=56, kernel_size=5, stride=(1, 2), padding=0, dilation=1)
+        self.conv1 = nn.Conv2d(in_channels=1, out_channels=16, kernel_size=7, stride=(1, 3), padding=0, dilation=2)
+        self.bn1 = nn.BatchNorm2d(16)
         self.rel1 = nn.ReLU()
-        self.conv2 = nn.Conv2d(in_channels=56, out_channels=112, kernel_size=3, stride=(1, 2), padding=0, dilation=1)
+        self.conv2 = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=5, stride=(1, 2), padding=0, dilation=1)
+        self.bn2 = nn.BatchNorm2d(32)
         self.rel2 = nn.ReLU()
-        self.conv3 = nn.Conv2d(in_channels=112, out_channels=56, kernel_size=1, stride=1, padding=0, dilation=1)
+        self.conv3 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=5, stride=(1, 2), padding=0, dilation=1)
         self.rel3 = nn.ReLU()
-        self.pool1 = nn.AvgPool2d((1, 10))
-        self.pool2 = nn.AvgPool2d((10, 1))
+        self.drop1 = nn.Dropout(0.2)
+        self.conv4 = nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=(1, 1), padding=0, dilation=1)
+        self.rel4 = nn.ReLU()
+        self.pool1 = nn.AvgPool2d((1, 71))
+        self.pool2 = nn.AvgPool2d((7, 1))
         self.flatten = Flatten()
         self.drop2 = nn.Dropout(0.2)
-        self.lin1 = nn.Linear(280, 512) #2520
+        self.lin1 = nn.Linear(2304, 512)
         self.al = net_sphere.AngleLinear(512, self.nclasses)
 
     def forward(self, x):
-        x = self.rel1(self.conv1(self.drop1(x)))
-        x = self.rel2(self.conv2(x))
+        x = self.rel1(self.bn1(self.conv1(x)))
+        x = self.rel2(self.bn2(self.conv2(x)))
         x = self.rel3(self.conv3(x))
+        x = self.rel4(self.conv4(self.drop1(x)))
         x = self.pool1(x)
         x = self.pool2(x)
         x = self.flatten(x)
@@ -93,7 +98,7 @@ if __name__=='__main__':
     # print(torchsummary.summary(net, (1, 64, 384)))
 
     net = Tester(127)
-    print(torchsummary.summary(net, (1, 64, 50)))
+    print(torchsummary.summary(net, (1, 64, 5184)))
     print(net._modules)
 
     # net = net_sphere.sphere20a(127)
