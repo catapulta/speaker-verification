@@ -252,21 +252,8 @@ def get_predictions(net, transform=False):
     return test_prediction
 
 
-def write_results(predictions, output_file='predictions.txt'):
-    """
-    Write predictions to file for submission.
-    File should be:
-        named 'predictions.txt'
-        in the root of your tar file
-    :param predictions: iterable of integers
-    :param output_file:  path to output file.
-    :return: None
-    """
-    print('Printing results to file...')
-    with open(output_file, 'w') as f:
-        for y in predictions:
-            f.write("{}\n".format(y))
-
+def write_results(predictions, output_file='prediction.npy'):
+    np.save(output_file, predictions)
 
 def xavier_init(model):
     for module in model.modules():
@@ -296,11 +283,10 @@ if __name__ == '__main__':
     import utils
     import net_sphere
 
-    # all_cnn = train_net(layer_name='Linear-41', pretrained_path='./model-big-resnet.pth', embedding_size=512, parts=[1], utterance_size=384, net=net_sphere.sphere20a, lr=0.000005, n_iters=1, batch_size=1, num_workers=1)
-    # all_cnn = train_net(layer_name='30', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_iters=500, batch_size=150, num_workers=4)
+    # all_cnn = train_net(layer_name='fc5_custom', pretrained_path='./model-big-resnet.pth', embedding_size=512, parts=[1], utterance_size=384, net=net_sphere.sphere20a, lr=0.000005, n_iters=1, batch_size=1, num_workers=1)
+    # all_cnn = train_net(layer_name='fc5_custom', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_iters=500, batch_size=150, num_workers=4)
     # pred_similarities = infer_embeddings(all_cnn, layer_name='Linear-41', utterance_size=384, embedding_size=512, gpu=True)
 
-    all_cnn = train_net(layer_name='Linear-7', pretrained_path=None, embedding_size=100, parts=[1], utterance_size=384, net=model.test_module, lr=0.005, n_iters=350, batch_size=20, num_workers=1)
-    pred_similarities = infer_embeddings(all_cnn, layer_name='Linear-7', utterance_size=20, embedding_size=512, gpu=True)
-
-    write_results(pred_similarities)
+    all_cnn = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=384, net=model.Tester, lr=0.005, n_iters=1, batch_size=150, num_workers=6)
+    pred_similarities = infer_embeddings(all_cnn, layer_name='lin1', utterance_size=384, embedding_size=512, gpu=True)
+    write_results(pred_similarities.squeeze())
