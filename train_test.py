@@ -30,7 +30,7 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
     criterion = net_sphere.AngleLoss()
     # optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-5)
     optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=1e-5)
-    scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[200, 250, 300], gamma=0.1)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.1, patience=20)
     if gpu:
         net.cuda()
 
@@ -51,6 +51,7 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
             optimizer.zero_grad()
             train_loss.backward()
             optimizer.step()
+            scheduler.step(train_loss)
             # train_output = train_output.cpu().argmax(dim=1).detach().numpy()
             train_prediction.append(train_output)
             train_labels = np.array(train_labels.cpu().numpy())
@@ -74,9 +75,8 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
                 print(t)
                 logging.info(t)
 
-        scheduler.step()
         # every 1 epochs, print validation statistics
-        epochs_print = 10
+        epochs_print = 15
         if i % epochs_print == 0 and not i == 0:
             with torch.no_grad():
                 t = "#########  Epoch {} #########".format(i)
@@ -353,7 +353,7 @@ if __name__ == '__main__':
     # pred_similarities = infer_embeddings(net=sphere, layer_name='fc5_custom', utterance_size=384, embedding_size=512,
     #                                      gpu=True)
 
-    tester = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=5184,
-                       net=model.Tester, lr=0.005, n_epochs=350, batch_size=200, num_workers=6)
+    tester = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1,2,3], utterance_size=5184,
+                       net=model.Tester, lr=0.005, n_epochs=350, batch_size=30, num_workers=5)
     pred_similarities = infer_embeddings(tester, layer_name='lin1', utterance_size=5184, embedding_size=512, gpu=True)
     write_results(pred_similarities.squeeze())

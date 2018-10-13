@@ -15,22 +15,22 @@ class Tester(nn.Module):
     def __init__(self, nclasses):
         super(Tester, self).__init__()
         self.nclasses = nclasses
-        self.conv1 = nn.Conv2d(in_channels=1, out_channels=16, kernel_size=7, stride=(1, 3), padding=0, dilation=2)
+        self.conv1 = nn.Conv2d(in_channels=1, out_channels=16, kernel_size=7, stride=(1, 3), padding=0, dilation=2, bias=False)
         self.bn1 = nn.BatchNorm2d(16)
         self.rel1 = nn.ReLU()
-        self.conv2 = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=5, stride=(1, 2), padding=0, dilation=1)
+        self.conv2 = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=5, stride=(1, 2), padding=0, dilation=1, bias=False)
         self.bn2 = nn.BatchNorm2d(32)
         self.rel2 = nn.ReLU()
-        self.conv3 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=5, stride=(1, 2), padding=0, dilation=1)
+        self.conv3 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=5, stride=(1, 2), padding=0, dilation=1, bias=False)
         self.rel3 = nn.ReLU()
         self.drop1 = nn.Dropout(0.2)
-        self.conv4 = nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=(1, 1), padding=0, dilation=1)
+        self.conv4 = nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=(1, 1), padding=0, dilation=1, bias=False)
         self.rel4 = nn.ReLU()
         self.pool1 = nn.AvgPool2d((1, 71))
         self.pool2 = nn.AvgPool2d((7, 1))
         self.flatten = Flatten()
         self.drop2 = nn.Dropout(0.2)
-        self.lin1 = nn.Linear(2304, 512)
+        self.lin1 = nn.Linear(2304, 512, bias=False)
         self.al = net_sphere.AngleLinear(512, self.nclasses)
 
     def forward(self, x):
