@@ -76,8 +76,8 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
 
         scheduler.step()
         # every 1 epochs, print validation statistics
-        epochs_print = 6
-        if i % epochs_print == 0:
+        epochs_print = 10
+        if i % epochs_print == 0 and not i == 0:
             with torch.no_grad():
                 t = "#########  Epoch {} #########".format(i)
                 print(t)
@@ -353,7 +353,7 @@ if __name__ == '__main__':
     # pred_similarities = infer_embeddings(net=sphere, layer_name='fc5_custom', utterance_size=384, embedding_size=512,
     #                                      gpu=True)
 
-    all_cnn = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=5184,
-                        net=model.Tester, lr=0.005, n_epochs=1, batch_size=200, num_workers=6)
-    pred_similarities = infer_embeddings(all_cnn, layer_name='lin1', utterance_size=5184, embedding_size=512, gpu=True)
+    tester = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=5184,
+                       net=model.Tester, lr=0.005, n_epochs=350, batch_size=200, num_workers=6)
+    pred_similarities = infer_embeddings(tester, layer_name='lin1', utterance_size=5184, embedding_size=512, gpu=True)
     write_results(pred_similarities.squeeze())
