@@ -362,3 +362,65 @@ INFO:root:#########  Epoch 0 #########
 INFO:root:Validation EER (0.49909509329563295, array(1.0000001783895127)):
 INFO:root:Took: 19.95783841609955
 INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 5.0288848876953125
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.554912567138672
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:Validation EER (0.48855472013506984, array(0.8106413483616491)):
+INFO:root:Took: 18.11780063311259
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 4.829886436462402
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.810173988342285
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 4.9207258224487305
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.716232776641846
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 4.882809162139893
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.662688255310059
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 4.914425373077393
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.43475866317749
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:Validation EER (0.4851350408262963, array(0.8465574901163374)):
+INFO:root:Took: 19.29458510875702
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 4.930087566375732
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.767172813415527
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 5.0140557289123535
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.08827018737793
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########
+INFO:root:At 50% of epoch 0
+INFO:root:Training loss : 4.929337978363037
+INFO:root:--------------------------------------------
+INFO:root:At 100% of epoch 0
+INFO:root:Training loss : 4.9398627281188965
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 0 #########

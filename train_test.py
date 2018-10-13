@@ -14,12 +14,13 @@ import net_sphere
 import utils
 
 
-def save_model(model,filename):
+def save_model(model, filename):
     state = model.state_dict()
     for key in state: state[key] = state[key].clone().cpu()
     torch.save(state, filename)
 
-def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name, embedding_size):
+
+def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_name, embedding_size):
     gpu = gpu and torch.cuda.is_available()
     if not gpu:
         print('Not using GPU.')
@@ -36,7 +37,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
     # switch to train mode
     net.train()
     best_rate = 100
-    for i in range(n_iters):
+    for i in range(n_epochs):
         tic = time.time()
         train_prediction = []
         train_observed = []
@@ -50,7 +51,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
             optimizer.zero_grad()
             train_loss.backward()
             optimizer.step()
-            #train_output = train_output.cpu().argmax(dim=1).detach().numpy()
+            # train_output = train_output.cpu().argmax(dim=1).detach().numpy()
             train_prediction.append(train_output)
             train_labels = np.array(train_labels.cpu().numpy())
             train_observed.append(train_labels)
@@ -62,13 +63,13 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                     j * train_loader.batch_size / train_loader.dataset.num_entries * 100, i)
                 print(t)
                 logging.info(t)
-            #    train_accuracy = np.array(train_output == train_labels).mean()
+                #    train_accuracy = np.array(train_output == train_labels).mean()
                 t = "Training loss : {}".format(train_loss.cpu().detach().numpy())
                 print(t)
                 logging.info(t)
-            #    t = "Training accuracy {}:".format(train_accuracy)
-            #    print(t)
-            #    logging.info(t)
+                #    t = "Training accuracy {}:".format(train_accuracy)
+                #    print(t)
+                #    logging.info(t)
                 t = '--------------------------------------------'
                 print(t)
                 logging.info(t)
@@ -82,9 +83,9 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 print(t)
                 logging.info(t)
                 # compute the accuracy of the prediction
-                #train_prediction = np.concatenate(train_prediction)
-                #train_observed = np.concatenate(train_observed)
-                #train_accuracy = (train_prediction == train_observed).mean()
+                # train_prediction = np.concatenate(train_prediction)
+                # train_observed = np.concatenate(train_observed)
+                # train_accuracy = (train_prediction == train_observed).mean()
                 # Now for the validation set
                 val_prediction = []
                 val_observed = []
@@ -93,17 +94,22 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
                     if gpu:
                         val_labels, val_enrol, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
-                    key_enrol, key_test = trial[0], trial[1]
-                    if key_test in test:
-                        embedding_test = enrol[key_test]
-                    else:
-                        embedding_test = extract_embedding(val_test, net, layer_name, (len(val_test), embedding_size))
-                        enrol[key_test] = embedding_test
-                    if key_enrol in enrol:
-                        embedding_enrol = enrol[key_enrol]
-                    else:
-                        embedding_enrol = extract_embedding(val_enrol, net, layer_name, (len(val_enrol), embedding_size))
-                        enrol[key_enrol] = embedding_enrol
+                    key_enrol_array, key_test_array = trial[0], trial[1]
+                    for t in range(trial.size(0)):
+                        key_enrol = key_enrol_array[t]
+                        key_test = key_test_array[t]
+                        if key_test in test:
+                            embedding_test = enrol[key_test]
+                        else:
+                            embedding_test = extract_embedding(val_test, net, layer_name,
+                                                               (len(val_test), embedding_size))
+                            test[key_test] = embedding_test
+                        if key_enrol in enrol:
+                            embedding_enrol = enrol[key_enrol]
+                        else:
+                            embedding_enrol = extract_embedding(val_enrol, net, layer_name,
+                                                                (len(val_enrol), embedding_size))
+                            enrol[key_enrol] = embedding_enrol
                     cos = torch.nn.CosineSimilarity()
                     val_output = cos(embedding_test, embedding_enrol)
                     val_prediction.append(val_output)
@@ -113,9 +119,9 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 val_observed = np.concatenate(val_observed)
                 #  compute the accuracy of the prediction
                 val_eed = utils.EER(val_observed, val_prediction)
-                #t = "Training accuracy : {}".format(train_accuracy)
-                #print(t)
-                #logging.info(t)
+                # t = "Training accuracy : {}".format(train_accuracy)
+                # print(t)
+                # logging.info(t)
                 t = "Validation EER {}:".format(val_eed)
                 print(t)
                 logging.info(t)
@@ -134,7 +140,8 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
     return net
 
 
-def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained_path=None, lr=0.05, n_iters=350, batch_size=100, num_workers=4):
+def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained_path=None, lr=0.05, n_epochs=350,
+              batch_size=100, num_workers=4):
     train_dataset = loader.UtteranceTrainDataset(parts=parts, utterance_size=utterance_size)
 
     train_loader = DataLoader(dataset=train_dataset,
@@ -157,7 +164,7 @@ def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained
         print('Loaded pre-trained weights.')
     else:
         net = xavier_init(net)
-    net = training_routine(net, n_iters, lr, True, train_loader, val_loader, layer_name, embedding_size)
+    net = training_routine(net, n_epochs, lr, True, train_loader, val_loader, layer_name, embedding_size)
     return net
 
 
@@ -199,19 +206,21 @@ def infer_embeddings(net, layer_name, embedding_size, utterance_size, gpu=True):
         test = {}
         for j, (trial, test_enrol, test_test) in (enumerate(test_loader)):
             if gpu:
-                net.cuda()
-                test_enrol, test_test = test_enrol.cuda(), test_test.cuda()
-            key_enrol, key_test = trial[0], trial[1]
-            if key_test in test:
-                embedding_test = enrol[key_test]
-            else:
-                embedding_test = extract_embedding(test_test, net, layer_name, (len(test_test), embedding_size))
-                enrol[key_test] = embedding_test
-            if key_enrol in enrol:
-                embedding_enrol = enrol[key_enrol]
-            else:
-                embedding_enrol = extract_embedding(test_enrol, net, layer_name, (len(test_enrol), embedding_size))
-                enrol[key_enrol] = embedding_enrol
+                val_labels, test_enrol, test_test = val_labels.cuda(), test_enrol.cuda(), test_test.cuda()
+            key_enrol_array, key_test_array = trial[0], trial[1]
+            for t in range(trial.size(0)):
+                key_enrol = key_enrol_array[t]
+                key_test = key_test_array[t]
+                if key_test in test:
+                    embedding_test = enrol[key_test]
+                else:
+                    embedding_test = extract_embedding(test_test, net, layer_name, (len(test_test), embedding_size))
+                    test[key_test] = embedding_test
+                if key_enrol in enrol:
+                    embedding_enrol = enrol[key_enrol]
+                else:
+                    embedding_enrol = extract_embedding(test_enrol, net, layer_name, (len(test_enrol), embedding_size))
+                    enrol[key_enrol] = embedding_enrol
             cos = torch.nn.CosineSimilarity()
             test_output = cos(embedding_test, embedding_enrol)
             test_prediction.append(test_output.cpu().numpy())
@@ -252,8 +261,55 @@ def get_predictions(net, transform=False):
     return test_prediction
 
 
+def validate(net, layer_name, embedding_size, batch_size, num_workers, utterance_size, gpu):
+    gpu = gpu and torch.cuda.is_available()
+    if not gpu:
+        print('Not using GPU.')
+    val_dataset = loader.UtteranceValidationDataset(utterance_size=utterance_size)
+    val_loader = DataLoader(dataset=val_dataset,
+                            batch_size=batch_size,
+                            shuffle=False,
+                            num_workers=num_workers,
+                            pin_memory=True)
+    val_prediction = []
+    val_observed = []
+    enrol = {}
+    test = {}
+    for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
+        if gpu:
+            val_labels, val_enrol, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
+        key_enrol_array, key_test_array = trial[0], trial[1]
+        for t in range(trial.size(0)):
+            key_enrol = key_enrol_array[t]
+            key_test = key_test_array[t]
+            if key_test in test:
+                embedding_test = enrol[key_test]
+            else:
+                embedding_test = extract_embedding(val_test, net, layer_name,
+                                                   (len(val_test), embedding_size))
+                test[key_test] = embedding_test
+            if key_enrol in enrol:
+                embedding_enrol = enrol[key_enrol]
+            else:
+                embedding_enrol = extract_embedding(val_enrol, net, layer_name,
+                                                    (len(val_enrol), embedding_size))
+                enrol[key_enrol] = embedding_enrol
+        cos = torch.nn.CosineSimilarity()
+        val_output = cos(embedding_test, embedding_enrol)
+        val_prediction.append(val_output)
+        val_labels = val_labels.cpu().numpy()
+        val_observed.append(val_labels)
+    val_prediction = np.concatenate(val_prediction)
+    val_observed = np.concatenate(val_observed)
+    #  compute the accuracy of the prediction
+    val_eed = utils.EER(val_observed, val_prediction)
+    t = "Validation EER {}:".format(val_eed)
+    print(t)
+
+
 def write_results(predictions, output_file='prediction.npy'):
     np.save(output_file, predictions)
+
 
 def xavier_init(model):
     for module in model.modules():
@@ -265,8 +321,8 @@ def xavier_init(model):
                 nn.init.constant_(module.bias, 0.01)
     return model
 
-def load_my_state_dict(net, state_dict):
 
+def load_my_state_dict(net, state_dict):
     own_state = net.state_dict()
     for name, param in state_dict.items():
         if name not in own_state:
@@ -283,10 +339,16 @@ if __name__ == '__main__':
     import utils
     import net_sphere
 
-    # all_cnn = train_net(layer_name='fc5_custom', pretrained_path='./model-big-resnet.pth', embedding_size=512, parts=[1], utterance_size=384, net=net_sphere.sphere20a, lr=0.000005, n_iters=1, batch_size=1, num_workers=1)
-    # all_cnn = train_net(layer_name='fc5_custom', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_iters=500, batch_size=150, num_workers=4)
-    # pred_similarities = infer_embeddings(all_cnn, layer_name='Linear-41', utterance_size=384, embedding_size=512, gpu=True)
+    # all_cnn = train_net(layer_name='fc5_custom', pretrained_path='./model-big-resnet.pth', embedding_size=512, parts=[1], utterance_size=384, net=net_sphere.sphere20a, lr=0.000005, n_epochs=1, batch_size=1, num_workers=1)
+    # all_cnn = train_net(layer_name='fc5_custom', embedding_size=100, net=model.all_cnn_module, lr=1e-5, n_epochs=500, batch_size=150, num_workers=4)
 
-    all_cnn = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=384, net=model.Tester, lr=0.005, n_iters=1, batch_size=150, num_workers=6)
-    pred_similarities = infer_embeddings(all_cnn, layer_name='lin1', utterance_size=384, embedding_size=512, gpu=True)
+    number_speakers = 381
+    sphere = net_sphere.sphere20a(number_speakers)
+    load_my_state_dict(sphere, torch.load('./model-big-resnet.pth'))
+    validate(net=sphere, layer_name='fc5_custom', batch_size=150, utterance_size=384, embedding_size=512, gpu=True, num_workers=6)
+    pred_similarities = infer_embeddings(net=sphere, layer_name='fc5_custom', utterance_size=384, embedding_size=512, gpu=True)
+
+    # all_cnn = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=384,
+    #                     net=model.Tester, lr=0.005, n_epochs=1, batch_size=150, num_workers=6)
+    # pred_similarities = infer_embeddings(all_cnn, layer_name='lin1', utterance_size=384, embedding_size=512, gpu=True)
     write_results(pred_similarities.squeeze())
