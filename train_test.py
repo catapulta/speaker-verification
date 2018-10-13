@@ -265,6 +265,8 @@ def validate(net, layer_name, embedding_size, batch_size, num_workers, utterance
     gpu = gpu and torch.cuda.is_available()
     if not gpu:
         print('Not using GPU.')
+    else:
+        net.cuda()
     val_dataset = loader.UtteranceValidationDataset(utterance_size=utterance_size)
     val_loader = DataLoader(dataset=val_dataset,
                             batch_size=batch_size,
@@ -277,28 +279,27 @@ def validate(net, layer_name, embedding_size, batch_size, num_workers, utterance
     test = {}
     for j, (trial, val_labels, val_enrol, val_test) in (enumerate(val_loader)):
         if gpu:
-            val_labels, val_enrol, val_test = val_labels.cuda(), val_enrol.cuda(), val_test.cuda()
-        key_enrol_array, key_test_array = trial[0], trial[1]
-        for t in range(trial.size(0)):
+            val_enrol, val_test = val_enrol.cuda(), val_test.cuda()
+        key_enrol_array, key_test_array = trial[:,0], trial[:,1]
+        embedding_test = []
+        embedding_enrol = []
+        for t in range(len(key_enrol_array)):
             key_enrol = key_enrol_array[t]
             key_test = key_test_array[t]
-            if key_test in test:
-                embedding_test = enrol[key_test]
-            else:
-                embedding_test = extract_embedding(val_test, net, layer_name,
-                                                   (len(val_test), embedding_size))
-                test[key_test] = embedding_test
-            if key_enrol in enrol:
-                embedding_enrol = enrol[key_enrol]
-            else:
-                embedding_enrol = extract_embedding(val_enrol, net, layer_name,
-                                                    (len(val_enrol), embedding_size))
-                enrol[key_enrol] = embedding_enrol
+            if key_test not in test:
+                test[key_test] = extract_embedding(val_test[t].unsqueeze(0), net, layer_name,
+                                                   (len(val_test[t]), embedding_size))
+            embedding_test.append(test[key_test])
+            if key_enrol not in enrol:
+                enrol[key_enrol] = extract_embedding(val_enrol[t].unsqueeze(0), net, layer_name,
+                                                    (len(val_enrol[t]), embedding_size))
+            embedding_enrol.append(enrol[key_enrol])
+        embedding_enrol = torch.cat(embedding_enrol)
+        embedding_test = torch.cat(embedding_test)
         cos = torch.nn.CosineSimilarity()
         val_output = cos(embedding_test, embedding_enrol)
-        val_prediction.append(val_output)
-        val_labels = val_labels.cpu().numpy()
-        val_observed.append(val_labels)
+        val_prediction.append(val_output.cpu().numpy())
+        val_observed.append(val_labels.numpy())
     val_prediction = np.concatenate(val_prediction)
     val_observed = np.concatenate(val_observed)
     #  compute the accuracy of the prediction
