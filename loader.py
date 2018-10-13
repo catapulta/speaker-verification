@@ -152,5 +152,5 @@ if __name__ == "__main__":
     #dl.download(parts=['A', 'B', 'C'])
     #dl.extract(parts=['A', 'B', 'C'], erase_tar=True)
     dl.get_train(parts=[ 5, 6])
-    dl.get_dev()
-    dl.get_test()
+    #dl.get_dev()
+    #dl.get_test()

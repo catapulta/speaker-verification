@@ -10,7 +10,14 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 import loader
+import net_sphere
+import utils
 
+
+def save_model(model,filename):
+    state = model.state_dict()
+    for key in state: state[key] = state[key].clone().cpu()
+    torch.save(state, filename)
 
 def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name, embedding_size):
     gpu = gpu and torch.cuda.is_available()
@@ -43,41 +50,41 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
             optimizer.zero_grad()
             train_loss.backward()
             optimizer.step()
-            train_output = train_output.cpu().argmax(dim=1).detach().numpy()
+            #train_output = train_output.cpu().argmax(dim=1).detach().numpy()
             train_prediction.append(train_output)
             train_labels = np.array(train_labels.cpu().numpy())
             train_observed.append(train_labels)
             torch.cuda.empty_cache()
 
             # training print
-            if j % 10 == 0 and j != 0:
+            if j % 4 == 0 and j != 0:
                 t = 'At {:.0f}% of epoch {}'.format(
                     j * train_loader.batch_size / train_loader.dataset.num_entries * 100, i)
                 print(t)
                 logging.info(t)
-                train_accuracy = np.array(train_output == train_labels).mean()
+            #    train_accuracy = np.array(train_output == train_labels).mean()
                 t = "Training loss : {}".format(train_loss.cpu().detach().numpy())
                 print(t)
                 logging.info(t)
-                t = "Training accuracy {}:".format(train_accuracy)
-                print(t)
-                logging.info(t)
+            #    t = "Training accuracy {}:".format(train_accuracy)
+            #    print(t)
+            #    logging.info(t)
                 t = '--------------------------------------------'
                 print(t)
                 logging.info(t)
 
         scheduler.step()
         # every 1 epochs, print validation statistics
-        epochs_print = 1
+        epochs_print = 6
         if i % epochs_print == 0:
             with torch.no_grad():
                 t = "#########  Epoch {} #########".format(i)
                 print(t)
                 logging.info(t)
                 # compute the accuracy of the prediction
-                train_prediction = np.concatenate(train_prediction)
-                train_observed = np.concatenate(train_observed)
-                train_accuracy = (train_prediction == train_observed).mean()
+                #train_prediction = np.concatenate(train_prediction)
+                #train_observed = np.concatenate(train_observed)
+                #train_accuracy = (train_prediction == train_observed).mean()
                 # Now for the validation set
                 val_prediction = []
                 val_observed = []
@@ -104,11 +111,11 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                     val_observed.append(val_labels)
                 val_prediction = np.concatenate(val_prediction)
                 val_observed = np.concatenate(val_observed)
-                # compute the accuracy of the prediction
+                #  compute the accuracy of the prediction
                 val_eed = utils.EER(val_observed, val_prediction)
-                t = "Training accuracy : {}".format(train_accuracy)
-                print(t)
-                logging.info(t)
+                #t = "Training accuracy : {}".format(train_accuracy)
+                #print(t)
+                #logging.info(t)
                 t = "Validation EER {}:".format(val_eed)
                 print(t)
                 logging.info(t)
@@ -120,7 +127,7 @@ def training_routine(net, n_iters, lr, gpu, train_loader, val_loader, layer_name
                 print(t)
                 logging.info(t)
                 if best_rate > val_eed[0]:
-                    torch.save(net, 'model.torch')
+                    save_model(net, 'model.torch')
                     best_rate = val_eed[0]
 
     net = net.cpu()
@@ -143,9 +150,30 @@ def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained
                             num_workers=num_workers,
                             pin_memory=True)
 
+    def load_my_state_dict(net, state_dict):
+ 
+        own_state = net.state_dict()
+        for name, param in state_dict.items():
+            if name not in own_state:
+                continue
+            if isinstance(param, nn.Parameter):
+                # backwards compatibility for serialized parameters
+                param = param.data
+            own_state[name].copy_(param)
+        return net
+
     net = net(train_loader.dataset.n_labels)
     if pretrained_path is not None:
-        net.load_state_dict(torch.load(pretrained_path))
+        pretrained_dict = torch.load(pretrained_path)
+        #model_dict = net.state_dict()
+        # 1. filter out unnecessary keys
+        #pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+        # 2. overwrite entries in the existing state dict
+        #model_dict.update(pretrained_dict) 
+        # 3. load the new state dict
+        #net.load_state_dict(pretrained_dict)
+        net = load_my_state_dict(net, pretrained_dict)
+        print('Loaded pre-trained weights.')
     else:
         net = xavier_init(net)
     net = training_routine(net, n_iters, lr, True, train_loader, val_loader, layer_name, embedding_size)
