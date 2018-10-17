@@ -28,9 +28,9 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
     logging.basicConfig(filename='train.log', level=logging.DEBUG)
     # criterion = nn.CrossEntropyLoss()
     criterion = net_sphere.AngleLoss()
-    optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-5, nesterov=True)
+    optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-4, nesterov=True)
     # optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=1e-5)
-    scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[200, 250, 300], gamma=0.1)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.1, patience=6)
     if gpu:
         net.cuda()
 
@@ -354,6 +354,6 @@ if __name__ == '__main__':
     #                                      gpu=True)
 
     tester = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=5184,
-                       net=model.AudioDenseNet121, lr=0.005, n_epochs=350, batch_size=200, num_workers=6)
+                       net=model.AudioDenseNet121, lr=0.1, n_epochs=350, batch_size=64, num_workers=6)
     pred_similarities = infer_embeddings(tester, layer_name='lin1', utterance_size=5184, embedding_size=512, gpu=True)
     write_results(pred_similarities.squeeze())

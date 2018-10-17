@@ -108,26 +108,28 @@ class AudioDenseNet121(nn.Module):
         def _forward(self, x):
             features = self.features(x)
             out = F.relu(features, inplace=True)
-            out = F.avg_pool2d(out, kernel_size=(1, 58), stride=1).view(features.size(0), -1)
+            out = F.avg_pool2d(out, kernel_size=(1, 29), stride=1).view(features.size(0), -1)
             out = self.classifier(out)
             return out
         self.densenet121.forward = types.MethodType(_forward, self.densenet121)
         # num_ftrs = self.densenet121.classifier.in_features
         # self.densenet121.features.
-        self.densenet121.classifier = nn.Linear(2048, 300, bias=False)
+        self.densenet121.classifier = nn.Linear(61440, 300, bias=False)
         self.al = net_sphere.AngleLinear(300, classnum)
 
     def forward(self, x):
         x = self.strider(x)
+        x = F.elu(x)
         x = self.densenet121(x)
-        x = F.normalize(x)
-        x = self.al(x)
+        # x = F.normalize(x)
+        # x = self.al(x)
         return x
 
 
 if __name__=='__main__':
     import torchsummary
     import net_sphere
+    import torch
 
     # net = all_cnn_module(127)
     # print(torchsummary.summary(net, (1, 64, 384)))
