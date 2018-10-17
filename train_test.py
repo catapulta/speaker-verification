@@ -28,8 +28,8 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
     logging.basicConfig(filename='train.log', level=logging.DEBUG)
     # criterion = nn.CrossEntropyLoss()
     criterion = net_sphere.AngleLoss()
-    # optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-5)
-    optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=1e-5)
+    optimizer = torch.optim.SGD(net.parameters(), lr=lr, momentum=0.9, weight_decay=1e-5, nesterov=True)
+    # optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=1e-5)
     scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[200, 250, 300], gamma=0.1)
     if gpu:
         net.cuda()

@@ -1,5 +1,8 @@
 from torch import nn
+from torch.nn import functional as F
 import net_sphere
+import torchvision
+import types
 
 
 class Flatten(nn.Module):
@@ -90,6 +93,38 @@ def all_cnn_module(nclasses):
     return net
 
 
+class AudioDenseNet121(nn.Module):
+    """Model modified.
+
+    The architecture of our model is the same as standard DenseNet121
+    except the classifier layer which has an additional sigmoid function.
+
+    """
+    def __init__(self, classnum):
+        super(AudioDenseNet121, self).__init__()
+        self.strider = nn.Conv2d(1, 3, (7, 15), (1, 8), (3, 0))
+        self.densenet121 = torchvision.models.densenet121(pretrained=True)
+
+        def _forward(self, x):
+            features = self.features(x)
+            out = F.relu(features, inplace=True)
+            out = F.avg_pool2d(out, kernel_size=(1, 58), stride=1).view(features.size(0), -1)
+            out = self.classifier(out)
+            return out
+        self.densenet121.forward = types.MethodType(_forward, self.densenet121)
+        # num_ftrs = self.densenet121.classifier.in_features
+        # self.densenet121.features.
+        self.densenet121.classifier = nn.Linear(2048, 300, bias=False)
+        self.al = net_sphere.AngleLinear(300, classnum)
+
+    def forward(self, x):
+        x = self.strider(x)
+        x = self.densenet121(x)
+        x = F.normalize(x)
+        x = self.al(x)
+        return x
+
+
 if __name__=='__main__':
     import torchsummary
     import net_sphere
@@ -97,9 +132,13 @@ if __name__=='__main__':
     # net = all_cnn_module(127)
     # print(torchsummary.summary(net, (1, 64, 384)))
 
-    net = Tester(127)
-    print(torchsummary.summary(net, (1, 64, 5184)))
-    print(net._modules)
+    # net = Tester(127)
+    # print(torchsummary.summary(net, (1, 64, 5184)))
+    # print(net._modules)
+
+    net = AudioDenseNet121(127)
+    print(torchsummary.summary(net, (1, 64, 468*32)))
+    # print(net._modules)
 
     # net = net_sphere.sphere20a(127)
     # print(torchsummary.summary(net, (1, 64, 384)))
