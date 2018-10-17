@@ -22,7 +22,7 @@ def train_load(path, parts):
     for p in tqdm(parts):
         npz = np.load(os.path.join(path, str(p) + ".preprocessed.npz"), encoding='latin1')
 
-        features.append(npz['feats'])
+        features.append(npz['feats'].astype(np.float16))
         speakers.append(npz['targets'])
 
     features = np.concatenate(features)
