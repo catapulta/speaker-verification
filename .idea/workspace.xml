@@ -4,6 +4,7 @@
     <list default="true" id="45dce387-5347-4573-a664-39e9e184307c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,17 +26,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="245" />
+          <entry key="Python Console" value="251" />
           <entry key="dummy" value="10" />
           <entry key="gitignore" value="16" />
-          <entry key="py" value="11789" />
-          <entry key="txt" value="429" />
+          <entry key="py" value="11949" />
+          <entry key="txt" value="461" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="455" />
-          <entry key="Python" value="11666" />
+          <entry key="PLAIN_TEXT" value="487" />
+          <entry key="Python" value="11832" />
           <entry key="Scratch" value="368" />
         </counts>
       </usages-collector>
@@ -87,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
+            <state relative-caret-position="289">
+              <caret line="118" column="27" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="27" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -99,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="355" column="114" selection-start-line="355" selection-start-column="110" selection-end-line="355" selection-end-column="114" />
+            <state relative-caret-position="289">
+              <caret line="356" column="55" lean-forward="true" selection-start-line="356" selection-start-column="55" selection-end-line="356" selection-end-column="55" />
               <folding>
                 <element signature="e#104#115#0" expanded="true" />
               </folding>
@@ -120,13 +121,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
+            <state relative-caret-position="221">
               <caret line="150" column="40" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="40" />
               <folding>
                 <element signature="e#394#411#0" expanded="true" />
-                <marker date="1539736712694" expanded="true" signature="585:630" ph="..." />
-                <marker date="1539736712694" expanded="true" signature="1505:1511" ph="..." />
-                <marker date="1539736712694" expanded="true" signature="5338:5339" ph="..." />
+                <marker date="1539739298094" expanded="true" signature="585:630" ph="..." />
+                <marker date="1539739298094" expanded="true" signature="1505:1511" ph="..." />
+                <marker date="1539739298094" expanded="true" signature="5338:5339" ph="..." />
               </folding>
             </state>
           </provider>
@@ -226,8 +227,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/net_sphere.py" />
         <option value="$PROJECT_DIR$/loader.py" />
-        <option value="$PROJECT_DIR$/train_test.py" />
         <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/train_test.py" />
       </list>
     </option>
   </component>
@@ -248,6 +249,11 @@
             <path>
               <item name="hw2p2-fall18" type="b2602c69:ProjectViewProjectNode" />
               <item name="hw2p2-fall18" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hw2p2-fall18" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hw2p2-fall18" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hw2p2-fall18" type="b2602c69:ProjectViewProjectNode" />
@@ -277,6 +283,117 @@
         <option name="myModuleName" value="hw2p2-fall18" />
       </console-settings>
     </option>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/model.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/train_test.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -648,7 +765,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539738454949</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Add alpha to audiodensenet">
+      <created>1539739311606</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1539739311606</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -699,7 +823,8 @@
     <MESSAGE value="Create densenet" />
     <MESSAGE value="Update trainer" />
     <MESSAGE value="Update audiodensenet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update audiodensenet" />
+    <MESSAGE value="Add alpha to audiodensenet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add alpha to audiodensenet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/torch.py" />
@@ -797,6 +922,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/speaker-verification.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/preprocess_plus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
@@ -807,40 +939,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speaker-verification.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
+    <entry file="file://$PROJECT_DIR$/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="150" column="40" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="40" />
+          <folding>
+            <element signature="e#394#411#0" expanded="true" />
+            <marker date="1539739298094" expanded="true" signature="585:630" ph="..." />
+            <marker date="1539739298094" expanded="true" signature="1505:1511" ph="..." />
+            <marker date="1539739298094" expanded="true" signature="5338:5339" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="355" column="114" selection-start-line="355" selection-start-column="110" selection-end-line="355" selection-end-column="114" />
+        <state relative-caret-position="289">
+          <caret line="356" column="55" lean-forward="true" selection-start-line="356" selection-start-column="55" selection-end-line="356" selection-end-column="55" />
           <folding>
             <element signature="e#104#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="150" column="40" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="40" />
-          <folding>
-            <element signature="e#394#411#0" expanded="true" />
-            <marker date="1539736712694" expanded="true" signature="585:630" ph="..." />
-            <marker date="1539736712694" expanded="true" signature="1505:1511" ph="..." />
-            <marker date="1539736712694" expanded="true" signature="5338:5339" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
+        <state relative-caret-position="289">
+          <caret line="118" column="27" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="27" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

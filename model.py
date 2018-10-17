@@ -2,7 +2,6 @@ from torch import nn
 from torch.nn import functional as F
 import net_sphere
 import torchvision
-import types
 import numpy as np
 import torch
 
@@ -106,24 +105,18 @@ class AudioDenseNet121(nn.Module):
         super(AudioDenseNet121, self).__init__()
         self.strider = nn.Conv2d(1, 3, (7, 15), (1, 8), (3, 0))
         self.densenet121 = torchvision.models.densenet121(pretrained=True)
-
-        def _forward(self, x):
-            features = self.features(x)
-            out = F.relu(features, inplace=True)
-            out = F.avg_pool2d(out, kernel_size=(1, 29), stride=1).view(features.size(0), -1)
-            out = self.classifier(out)
-            return out
-        self.densenet121.forward = types.MethodType(_forward, self.densenet121)
-        # num_ftrs = self.densenet121.classifier.in_features
-        # self.densenet121.features.
-        self.densenet121.classifier = nn.Linear(61440, 300, bias=False)
+        self.avg_pool = nn.AvgPool2d(kernel_size=(1, 29))
+        self.embeddings = nn.Linear(4096, 300, bias=False)
         self.al = net_sphere.AngleLinear(300, classnum)
         self.alpha = torch.from_numpy(np.array(16)).float()
 
     def forward(self, x):
         x = self.strider(x)
         x = F.elu(x)
-        x = self.densenet121(x)
+        x = self.densenet121.features(x) # use only features
+        x = F.relu(x, inplace=True)
+        x = self.avg_pool(x).view(x.size(0), -1)
+        x = self.embeddings(x)
         x = F.normalize(x) * self.alpha
         x = self.al(x)
         return x
@@ -131,7 +124,6 @@ class AudioDenseNet121(nn.Module):
 
 if __name__=='__main__':
     import torchsummary
-    import torch
 
     # net = all_cnn_module(127)
     # print(torchsummary.summary(net, (1, 64, 384)))
