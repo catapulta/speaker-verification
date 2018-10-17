@@ -108,7 +108,7 @@ class AudioDenseNet121(nn.Module):
         self.avg_pool = nn.AvgPool2d(kernel_size=(1, 29))
         self.embeddings = nn.Linear(4096, 300, bias=False)
         self.al = net_sphere.AngleLinear(300, classnum)
-        self.alpha = torch.from_numpy(np.array(16)).float()
+        self.alpha = torch.from_numpy(np.array(16)).float().cuda()
 
     def forward(self, x):
         x = self.strider(x)

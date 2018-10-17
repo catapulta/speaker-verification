@@ -41,6 +41,8 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
         tic = time.time()
         train_prediction = []
         train_observed = []
+        train_loss_avg = 0
+        train_loss_epochs = 0
         for j, (train_labels, train_data) in enumerate(train_loader):
             if gpu:
                 train_labels, train_data = train_labels.cuda(), train_data.cuda()
@@ -51,6 +53,8 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
             optimizer.zero_grad()
             train_loss.backward()
             optimizer.step()
+            train_loss_avg += train_loss.cpu().detach().numpy()
+            train_loss_epochs += train_loss.cpu().detach().numpy()
             # train_output = train_output.cpu().argmax(dim=1).detach().numpy()
             train_prediction.append(train_output)
             train_labels = np.array(train_labels.cpu().numpy())
@@ -58,13 +62,15 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
             torch.cuda.empty_cache()
 
             # training print
-            if j % 4 == 0 and j != 0:
+            batch_print = 40
+            if j % batch_print == 0 and j != 0:
                 t = 'At {:.0f}% of epoch {}'.format(
                     j * train_loader.batch_size / train_loader.dataset.num_entries * 100, i)
                 print(t)
                 logging.info(t)
                 #    train_accuracy = np.array(train_output == train_labels).mean()
-                t = "Training loss : {}".format(train_loss.cpu().detach().numpy())
+                t = "Training loss : {}".format(train_loss_epochs / batch_print)
+                train_loss_epochs = 0
                 print(t)
                 logging.info(t)
                 #    t = "Training accuracy {}:".format(train_accuracy)
@@ -73,8 +79,8 @@ def training_routine(net, n_epochs, lr, gpu, train_loader, val_loader, layer_nam
                 t = '--------------------------------------------'
                 print(t)
                 logging.info(t)
-
-        scheduler.step()
+        
+        scheduler.step(train_loss_avg/j)
         # every 1 epochs, print validation statistics
         epochs_print = 10
         if i % epochs_print == 0 and not i == 0:
@@ -354,6 +360,6 @@ if __name__ == '__main__':
     #                                      gpu=True)
 
     tester = train_net(layer_name='embeddings', pretrained_path=None, embedding_size=300, parts=[1, 2, 3], utterance_size=468*32,
-                       net=model.AudioDenseNet121, lr=0.1, n_epochs=350, batch_size=64, num_workers=6)
+                       net=model.AudioDenseNet121, lr=0.1, n_epochs=350, batch_size=23, num_workers=6)
     pred_similarities = infer_embeddings(tester, layer_name='lin1', utterance_size=468*32, embedding_size=300, gpu=True)
     write_results(pred_similarities.squeeze())

@@ -151,6 +151,6 @@ if __name__ == "__main__":
     dl = DataDownload(vad_nframes=468*32)
     # dl.download(parts=['A', 'B', 'C'])
     # dl.extract(parts=['A', 'B', 'C'], erase_tar=True)
-    dl.get_train(parts=[1,2,3])
+    dl.get_train(parts=[5,6])
     dl.get_dev()
     dl.get_test()
