@@ -149,8 +149,8 @@ if __name__ == "__main__":
     #print(UtteranceTestDataset(utterance_size=20)[1][2].shape)
 
     dl = DataDownload(vad_nframes=468*32)
-    #dl.download(parts=['A', 'B', 'C'])
-    #dl.extract(parts=['A', 'B', 'C'], erase_tar=True)
+    # dl.download(parts=['A', 'B', 'C'])
+    # dl.extract(parts=['A', 'B', 'C'], erase_tar=True)
     dl.get_train(parts=[1,2,3])
     dl.get_dev()
     dl.get_test()

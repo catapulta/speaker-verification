@@ -3,6 +3,7 @@ from torch.nn import functional as F
 import net_sphere
 import torchvision
 import types
+import numpy as np
 
 
 class Flatten(nn.Module):
@@ -116,19 +117,19 @@ class AudioDenseNet121(nn.Module):
         # self.densenet121.features.
         self.densenet121.classifier = nn.Linear(61440, 300, bias=False)
         self.al = net_sphere.AngleLinear(300, classnum)
+        self.alpha = torch.from_numpy(np.array(16)).float()
 
     def forward(self, x):
         x = self.strider(x)
         x = F.elu(x)
         x = self.densenet121(x)
-        # x = F.normalize(x)
-        # x = self.al(x)
+        x = F.normalize(x) * self.alpha
+        x = self.al(x)
         return x
 
 
 if __name__=='__main__':
     import torchsummary
-    import net_sphere
     import torch
 
     # net = all_cnn_module(127)

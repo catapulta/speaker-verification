@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45dce387-5347-4573-a664-39e9e184307c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,17 +25,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="151" />
+          <entry key="Python Console" value="245" />
           <entry key="dummy" value="10" />
           <entry key="gitignore" value="16" />
-          <entry key="py" value="11592" />
-          <entry key="txt" value="374" />
+          <entry key="py" value="11789" />
+          <entry key="txt" value="429" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="400" />
-          <entry key="Python" value="11375" />
+          <entry key="PLAIN_TEXT" value="455" />
+          <entry key="Python" value="11666" />
           <entry key="Scratch" value="368" />
         </counts>
       </usages-collector>
@@ -86,25 +84,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="139" column="50" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="50" />
+            <state relative-caret-position="238">
+              <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1539736238677" expanded="true" signature="339:1781" ph="..." />
-                <marker date="1539736238677" expanded="true" signature="1811:1816" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Miniconda3/envs/dl/Lib/site-packages/torchvision/models/densenet.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2924">
-              <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -112,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
+            <state relative-caret-position="412">
+              <caret line="355" column="114" selection-start-line="355" selection-start-column="110" selection-end-line="355" selection-end-column="114" />
               <folding>
                 <element signature="e#104#115#0" expanded="true" />
               </folding>
@@ -130,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="147" column="69" lean-forward="true" selection-start-line="147" selection-start-column="69" selection-end-line="147" selection-end-column="69" />
+            <state relative-caret-position="453">
+              <caret line="150" column="40" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="40" />
               <folding>
                 <element signature="e#394#411#0" expanded="true" />
                 <marker date="1539736712694" expanded="true" signature="585:630" ph="..." />
@@ -177,8 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.cpu(</find>
-      <find>if gpu</find>
       <find>utteranced</find>
       <find>embedding_size</find>
       <find>extract_em</find>
@@ -207,6 +192,8 @@
       <find>double</find>
       <find>gpu</find>
       <find>sgd</find>
+      <find>468*32</find>
+      <find>train_net</find>
     </findStrings>
     <replaceStrings>
       <replace>1d</replace>
@@ -238,9 +225,9 @@
         <option value="$PROJECT_DIR$/speaker-verification.ipynb" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/net_sphere.py" />
+        <option value="$PROJECT_DIR$/loader.py" />
         <option value="$PROJECT_DIR$/train_test.py" />
         <option value="$PROJECT_DIR$/model.py" />
-        <option value="$PROJECT_DIR$/loader.py" />
       </list>
     </option>
   </component>
@@ -640,7 +627,28 @@
       <option name="project" value="LOCAL" />
       <updated>1539454968735</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Create densenet">
+      <created>1539736723044</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1539736723044</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update trainer">
+      <created>1539736931424</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1539736931424</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Update audiodensenet">
+      <created>1539738454949</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1539738454949</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -688,7 +696,10 @@
     <MESSAGE value="Fix dictionary" />
     <MESSAGE value="Create small network" />
     <MESSAGE value="Change optimizer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change optimizer" />
+    <MESSAGE value="Create densenet" />
+    <MESSAGE value="Update trainer" />
+    <MESSAGE value="Update audiodensenet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update audiodensenet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/torch.py" />
@@ -762,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speaker-verification.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/train-big-resnet.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75378">
@@ -793,28 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
-          <folding>
-            <element signature="e#104#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="139" column="50" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1539736238677" expanded="true" signature="339:1781" ph="..." />
-            <marker date="1539736238677" expanded="true" signature="1811:1816" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/preprocess_plus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
@@ -825,15 +807,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/speaker-verification.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="355" column="114" selection-start-line="355" selection-start-column="110" selection-end-line="355" selection-end-column="114" />
+          <folding>
+            <element signature="e#104#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="147" column="69" lean-forward="true" selection-start-line="147" selection-start-column="69" selection-end-line="147" selection-end-column="69" />
+        <state relative-caret-position="453">
+          <caret line="150" column="40" selection-start-line="150" selection-start-column="34" selection-end-line="150" selection-end-column="40" />
           <folding>
             <element signature="e#394#411#0" expanded="true" />
             <marker date="1539736712694" expanded="true" signature="585:630" ph="..." />
             <marker date="1539736712694" expanded="true" signature="1505:1511" ph="..." />
             <marker date="1539736712694" expanded="true" signature="5338:5339" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
