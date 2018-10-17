@@ -253,3 +253,9 @@ INFO:root:--------------------------------------------
 INFO:root:At 53% of epoch 2
 INFO:root:Training loss : 5.916590404510498
 INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 2
+INFO:root:Training loss : 5.898276054859162
+INFO:root:--------------------------------------------
+INFO:root:At 74% of epoch 2
+INFO:root:Training loss : 5.9813674807548525
+INFO:root:--------------------------------------------
