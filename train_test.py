@@ -158,12 +158,12 @@ def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained
                             pin_memory=True)
 
     net = net(train_loader.dataset.n_labels)
-    if pretrained_path is not None:
-        pretrained_dict = torch.load(pretrained_path)
-        net = load_my_state_dict(net, pretrained_dict)
-        print('Loaded pre-trained weights.')
-    else:
-        net = xavier_init(net)
+    # if pretrained_path is not None:
+    #     pretrained_dict = torch.load(pretrained_path)
+    #     net = load_my_state_dict(net, pretrained_dict)
+    #     print('Loaded pre-trained weights.')
+    # else:
+    #     net = xavier_init(net)
     net = training_routine(net, n_epochs, lr, True, train_loader, val_loader, layer_name, embedding_size)
     return net
 
@@ -354,6 +354,6 @@ if __name__ == '__main__':
     #                                      gpu=True)
 
     tester = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=5184,
-                       net=model.Tester, lr=0.005, n_epochs=350, batch_size=200, num_workers=6)
+                       net=model.AudioDenseNet121, lr=0.005, n_epochs=350, batch_size=200, num_workers=6)
     pred_similarities = infer_embeddings(tester, layer_name='lin1', utterance_size=5184, embedding_size=512, gpu=True)
     write_results(pred_similarities.squeeze())
