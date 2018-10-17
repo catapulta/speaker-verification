@@ -232,3 +232,24 @@ INFO:root:--------------------------------------------
 INFO:root:At 74% of epoch 1
 INFO:root:Training loss : 6.44371075630188
 INFO:root:--------------------------------------------
+INFO:root:At 85% of epoch 1
+INFO:root:Training loss : 6.392660641670227
+INFO:root:--------------------------------------------
+INFO:root:At 96% of epoch 1
+INFO:root:Training loss : 6.260471272468567
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 2
+INFO:root:Training loss : 6.011030209064484
+INFO:root:--------------------------------------------
+INFO:root:At 21% of epoch 2
+INFO:root:Training loss : 6.036464130878448
+INFO:root:--------------------------------------------
+INFO:root:At 32% of epoch 2
+INFO:root:Training loss : 6.077629268169403
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 2
+INFO:root:Training loss : 5.898137605190277
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 2
+INFO:root:Training loss : 5.916590404510498
+INFO:root:--------------------------------------------

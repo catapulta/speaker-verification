@@ -164,10 +164,10 @@ def train_net(net, layer_name, embedding_size, utterance_size, parts, pretrained
                             pin_memory=True)
 
     net = net(train_loader.dataset.n_labels)
-    # if pretrained_path is not None:
-    #     pretrained_dict = torch.load(pretrained_path)
-    #     net = load_my_state_dict(net, pretrained_dict)
-    #     print('Loaded pre-trained weights.')
+    if pretrained_path is not None:
+        pretrained_dict = torch.load(pretrained_path)
+        net = load_my_state_dict(net, pretrained_dict)
+        print('Loaded pre-trained weights.')
     # else:
     #     net = xavier_init(net)
     net = training_routine(net, n_epochs, lr, True, train_loader, val_loader, layer_name, embedding_size)
@@ -359,7 +359,7 @@ if __name__ == '__main__':
     # pred_similarities = infer_embeddings(net=sphere, layer_name='fc5_custom', utterance_size=384, embedding_size=512,
     #                                      gpu=True)
 
-    tester = train_net(layer_name='embeddings', pretrained_path=None, embedding_size=300, parts=[1, 2, 3], utterance_size=468*32,
+    tester = train_net(layer_name='embeddings', pretrained_path='model.torch', embedding_size=300, parts=[1, 2, 3], utterance_size=468*32,
                        net=model.AudioDenseNet121, lr=0.1, n_epochs=350, batch_size=23, num_workers=6)
     pred_similarities = infer_embeddings(tester, layer_name='lin1', utterance_size=468*32, embedding_size=300, gpu=True)
     write_results(pred_similarities.squeeze())
