@@ -4,6 +4,7 @@ import net_sphere
 import torchvision
 import types
 import numpy as np
+import torch
 
 
 class Flatten(nn.Module):

@@ -353,7 +353,7 @@ if __name__ == '__main__':
     # pred_similarities = infer_embeddings(net=sphere, layer_name='fc5_custom', utterance_size=384, embedding_size=512,
     #                                      gpu=True)
 
-    tester = train_net(layer_name='lin1', pretrained_path=None, embedding_size=512, parts=[1], utterance_size=5184,
+    tester = train_net(layer_name='', pretrained_path=None, embedding_size=512, parts=[1,2,3], utterance_size=5184,
                        net=model.AudioDenseNet121, lr=0.1, n_epochs=350, batch_size=64, num_workers=6)
     pred_similarities = infer_embeddings(tester, layer_name='lin1', utterance_size=5184, embedding_size=512, gpu=True)
     write_results(pred_similarities.squeeze())
