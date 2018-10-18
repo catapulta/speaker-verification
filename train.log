@@ -1,261 +1,2005 @@
-INFO:root:At 72% of epoch 0
-INFO:root:Training loss : 5.436442852020264
-INFO:root:--------------------------------------------
-INFO:root:At 72% of epoch 0
-INFO:root:Training loss : 6.012094020843506
-INFO:root:--------------------------------------------
-INFO:root:At 2% of epoch 0
-INFO:root:Training loss : 11.97221851348877
-INFO:root:--------------------------------------------
-INFO:root:At 4% of epoch 0
-INFO:root:Training loss : 9.299588918685913
+INFO:root:At 3% of epoch 0
+INFO:root:Training loss : 9.986600494384765
 INFO:root:--------------------------------------------
 INFO:root:At 6% of epoch 0
-INFO:root:Training loss : 7.936470826466878
+INFO:root:Training loss : 10.491848874092103
 INFO:root:--------------------------------------------
 INFO:root:At 8% of epoch 0
-INFO:root:Training loss : 7.619643211364746
-INFO:root:--------------------------------------------
-INFO:root:At 10% of epoch 0
-INFO:root:Training loss : 7.538407611846924
+INFO:root:Training loss : 10.410789608955383
 INFO:root:--------------------------------------------
 INFO:root:At 11% of epoch 0
-INFO:root:Training loss : 7.484533468882243
+INFO:root:Training loss : 10.254666733741761
 INFO:root:--------------------------------------------
-INFO:root:At 13% of epoch 0
-INFO:root:Training loss : 7.596191951206753
-INFO:root:--------------------------------------------
-INFO:root:At 15% of epoch 0
-INFO:root:Training loss : 7.511487126350403
+INFO:root:At 14% of epoch 0
+INFO:root:Training loss : 10.211378931999207
 INFO:root:--------------------------------------------
 INFO:root:At 17% of epoch 0
-INFO:root:Training loss : 7.582559267679851
+INFO:root:Training loss : 10.046191596984864
 INFO:root:--------------------------------------------
-INFO:root:At 19% of epoch 0
-INFO:root:Training loss : 7.4117920875549315
+INFO:root:At 20% of epoch 0
+INFO:root:Training loss : 10.26576795578003
 INFO:root:--------------------------------------------
-INFO:root:At 21% of epoch 0
-INFO:root:Training loss : 7.465279579162598
-INFO:root:--------------------------------------------
-INFO:root:At 23% of epoch 0
-INFO:root:Training loss : 7.406290173530579
+INFO:root:At 22% of epoch 0
+INFO:root:Training loss : 10.136624312400818
 INFO:root:--------------------------------------------
 INFO:root:At 25% of epoch 0
-INFO:root:Training loss : 7.451620175288274
+INFO:root:Training loss : 10.403205633163452
 INFO:root:--------------------------------------------
-INFO:root:At 27% of epoch 0
-INFO:root:Training loss : 7.475032023021153
-INFO:root:--------------------------------------------
-INFO:root:At 29% of epoch 0
-INFO:root:Training loss : 7.466314220428467
+INFO:root:At 28% of epoch 0
+INFO:root:Training loss : 10.30601236820221
 INFO:root:--------------------------------------------
 INFO:root:At 31% of epoch 0
-INFO:root:Training loss : 7.36842542886734
-INFO:root:--------------------------------------------
-INFO:root:At 33% of epoch 0
-INFO:root:Training loss : 7.302271478316364
+INFO:root:Training loss : 10.40592818260193
 INFO:root:--------------------------------------------
 INFO:root:At 34% of epoch 0
-INFO:root:Training loss : 7.172065416971843
+INFO:root:Training loss : 10.311927843093873
 INFO:root:--------------------------------------------
 INFO:root:At 36% of epoch 0
-INFO:root:Training loss : 7.204559301075182
+INFO:root:Training loss : 10.145822906494141
 INFO:root:--------------------------------------------
-INFO:root:At 38% of epoch 0
-INFO:root:Training loss : 7.144257211685181
-INFO:root:--------------------------------------------
-INFO:root:At 40% of epoch 0
-INFO:root:Training loss : 7.171155906858898
+INFO:root:At 39% of epoch 0
+INFO:root:Training loss : 10.403923177719117
 INFO:root:--------------------------------------------
 INFO:root:At 42% of epoch 0
-INFO:root:Training loss : 7.13067965074019
+INFO:root:Training loss : 10.395930504798889
 INFO:root:--------------------------------------------
-INFO:root:At 44% of epoch 0
-INFO:root:Training loss : 7.122874570929485
+INFO:root:At 45% of epoch 0
+INFO:root:Training loss : 10.424222779273986
 INFO:root:--------------------------------------------
-INFO:root:At 46% of epoch 0
-INFO:root:Training loss : 7.11748335758845
-INFO:root:--------------------------------------------
-INFO:root:At 48% of epoch 0
-INFO:root:Training loss : 7.062242164611816
+INFO:root:At 47% of epoch 0
+INFO:root:Training loss : 10.396747732162476
 INFO:root:--------------------------------------------
 INFO:root:At 50% of epoch 0
-INFO:root:Training loss : 7.0457936617044306
-INFO:root:--------------------------------------------
-INFO:root:At 52% of epoch 0
-INFO:root:Training loss : 7.013116483335142
-INFO:root:--------------------------------------------
-INFO:root:At 54% of epoch 0
-INFO:root:Training loss : 7.01192421572549
-INFO:root:--------------------------------------------
-INFO:root:At 55% of epoch 0
-INFO:root:Training loss : 6.9818686616831815
-INFO:root:--------------------------------------------
-INFO:root:At 57% of epoch 0
-INFO:root:Training loss : 6.961842966079712
-INFO:root:--------------------------------------------
-INFO:root:At 59% of epoch 0
-INFO:root:Training loss : 6.913682153148036
-INFO:root:--------------------------------------------
-INFO:root:At 61% of epoch 0
-INFO:root:Training loss : 6.8449385315179825
-INFO:root:--------------------------------------------
-INFO:root:At 63% of epoch 0
-INFO:root:Training loss : 6.784132090481845
-INFO:root:--------------------------------------------
-INFO:root:At 65% of epoch 0
-INFO:root:Training loss : 6.740064901464126
-INFO:root:--------------------------------------------
-INFO:root:At 67% of epoch 0
-INFO:root:Training loss : 6.7283533096313475
-INFO:root:--------------------------------------------
-INFO:root:At 69% of epoch 0
-INFO:root:Training loss : 6.6898915900124445
-INFO:root:--------------------------------------------
-INFO:root:At 71% of epoch 0
-INFO:root:Training loss : 6.662183142997123
-INFO:root:--------------------------------------------
-INFO:root:At 73% of epoch 0
-INFO:root:Training loss : 6.651926040649414
-INFO:root:--------------------------------------------
-INFO:root:At 75% of epoch 0
-INFO:root:Training loss : 6.619113604227702
-INFO:root:--------------------------------------------
-INFO:root:At 77% of epoch 0
-INFO:root:Training loss : 6.581069803237915
-INFO:root:--------------------------------------------
-INFO:root:At 78% of epoch 0
-INFO:root:Training loss : 6.5411121089284014
-INFO:root:--------------------------------------------
-INFO:root:At 80% of epoch 0
-INFO:root:Training loss : 6.518371820449829
-INFO:root:--------------------------------------------
-INFO:root:At 82% of epoch 0
-INFO:root:Training loss : 6.48999547958374
-INFO:root:--------------------------------------------
-INFO:root:At 84% of epoch 0
-INFO:root:Training loss : 6.482948097315702
-INFO:root:--------------------------------------------
-INFO:root:At 86% of epoch 0
-INFO:root:Training loss : 6.467355187733968
-INFO:root:--------------------------------------------
-INFO:root:At 88% of epoch 0
-INFO:root:Training loss : 6.465883358665135
-INFO:root:--------------------------------------------
-INFO:root:At 90% of epoch 0
-INFO:root:Training loss : 6.4707358542909015
-INFO:root:--------------------------------------------
-INFO:root:At 92% of epoch 0
-INFO:root:Training loss : 6.464462578296661
-INFO:root:--------------------------------------------
-INFO:root:At 94% of epoch 0
-INFO:root:Training loss : 6.465724195752825
-INFO:root:--------------------------------------------
-INFO:root:At 96% of epoch 0
-INFO:root:Training loss : 6.4486383438110355
-INFO:root:--------------------------------------------
-INFO:root:At 98% of epoch 0
-INFO:root:Training loss : 6.409088059967639
-INFO:root:--------------------------------------------
-INFO:root:At 100% of epoch 0
-INFO:root:Training loss : 6.352683058151832
-INFO:root:--------------------------------------------
-INFO:root:At 2% of epoch 1
-INFO:root:Training loss : 10.812947273254395
-INFO:root:--------------------------------------------
-INFO:root:At 4% of epoch 1
-INFO:root:Training loss : 7.944427013397217
-INFO:root:--------------------------------------------
-INFO:root:At 6% of epoch 1
-INFO:root:Training loss : 7.030801296234131
-INFO:root:--------------------------------------------
-INFO:root:At 8% of epoch 1
-INFO:root:Training loss : 6.50149941444397
-INFO:root:--------------------------------------------
-INFO:root:At 10% of epoch 1
-INFO:root:Training loss : 6.119280052185059
-INFO:root:--------------------------------------------
-INFO:root:At 11% of epoch 1
-INFO:root:Training loss : 6.001611073811849
-INFO:root:--------------------------------------------
-INFO:root:At 13% of epoch 1
-INFO:root:Training loss : 5.824980531420026
-INFO:root:--------------------------------------------
-INFO:root:At 15% of epoch 1
-INFO:root:Training loss : 5.747962117195129
-INFO:root:--------------------------------------------
-INFO:root:At 11% of epoch 0
-INFO:root:Training loss : 8.543611943721771
-INFO:root:--------------------------------------------
-INFO:root:At 21% of epoch 0
-INFO:root:Training loss : 8.440780556201934
-INFO:root:--------------------------------------------
-INFO:root:At 32% of epoch 0
-INFO:root:Training loss : 8.235880947113037
-INFO:root:--------------------------------------------
-INFO:root:At 42% of epoch 0
-INFO:root:Training loss : 7.834979152679443
+INFO:root:Training loss : 10.329721999168395
 INFO:root:--------------------------------------------
 INFO:root:At 53% of epoch 0
-INFO:root:Training loss : 7.763122487068176
+INFO:root:Training loss : 10.35939164161682
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 0
+INFO:root:Training loss : 10.322176837921143
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 0
+INFO:root:Training loss : 10.377145981788635
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 0
+INFO:root:Training loss : 10.479430603981019
 INFO:root:--------------------------------------------
 INFO:root:At 64% of epoch 0
-INFO:root:Training loss : 7.545086216926575
+INFO:root:Training loss : 10.303383135795594
 INFO:root:--------------------------------------------
-INFO:root:At 74% of epoch 0
-INFO:root:Training loss : 7.325214421749115
+INFO:root:At 67% of epoch 0
+INFO:root:Training loss : 10.175263833999633
 INFO:root:--------------------------------------------
-INFO:root:At 85% of epoch 0
-INFO:root:Training loss : 7.140427446365356
+INFO:root:At 70% of epoch 0
+INFO:root:Training loss : 10.291348814964294
 INFO:root:--------------------------------------------
-INFO:root:At 96% of epoch 0
-INFO:root:Training loss : 7.1891775846481325
+INFO:root:At 73% of epoch 0
+INFO:root:Training loss : 10.046743273735046
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 0
+INFO:root:Training loss : 10.266492557525634
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 0
+INFO:root:Training loss : 10.175198173522949
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 0
+INFO:root:Training loss : 9.914479517936707
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 0
+INFO:root:Training loss : 9.95841121673584
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 0
+INFO:root:Training loss : 10.016992807388306
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 0
+INFO:root:Training loss : 9.98239998817444
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 0
+INFO:root:Training loss : 9.797889280319215
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 0
+INFO:root:Training loss : 9.906915879249572
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 0
+INFO:root:Training loss : 9.830642175674438
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 1
+INFO:root:Training loss : 9.657681918144226
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 1
+INFO:root:Training loss : 9.591701674461365
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 1
+INFO:root:Training loss : 9.418307375907897
 INFO:root:--------------------------------------------
 INFO:root:At 11% of epoch 1
-INFO:root:Training loss : 6.870633327960968
+INFO:root:Training loss : 9.527659726142883
 INFO:root:--------------------------------------------
-INFO:root:At 21% of epoch 1
-INFO:root:Training loss : 6.726027536392212
+INFO:root:At 14% of epoch 1
+INFO:root:Training loss : 9.570772290229797
 INFO:root:--------------------------------------------
-INFO:root:At 32% of epoch 1
-INFO:root:Training loss : 6.610253703594208
+INFO:root:At 17% of epoch 1
+INFO:root:Training loss : 9.541646265983582
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 1
+INFO:root:Training loss : 9.498233962059022
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 1
+INFO:root:Training loss : 9.621141409873962
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 1
+INFO:root:Training loss : 9.792869162559509
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 1
+INFO:root:Training loss : 9.67850067615509
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 1
+INFO:root:Training loss : 9.871495223045349
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 1
+INFO:root:Training loss : 9.866893911361695
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 1
+INFO:root:Training loss : 9.56920666694641
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 1
+INFO:root:Training loss : 9.805108666419983
 INFO:root:--------------------------------------------
 INFO:root:At 42% of epoch 1
-INFO:root:Training loss : 6.534344863891602
+INFO:root:Training loss : 9.747032427787781
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 1
+INFO:root:Training loss : 9.90007483959198
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 1
+INFO:root:Training loss : 9.690966629981995
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 1
+INFO:root:Training loss : 9.85055148601532
 INFO:root:--------------------------------------------
 INFO:root:At 53% of epoch 1
-INFO:root:Training loss : 6.594180262088775
+INFO:root:Training loss : 9.84411563873291
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 1
+INFO:root:Training loss : 9.766798710823059
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 1
+INFO:root:Training loss : 9.589938306808472
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 1
+INFO:root:Training loss : 9.674538969993591
 INFO:root:--------------------------------------------
 INFO:root:At 64% of epoch 1
-INFO:root:Training loss : 6.515251791477203
+INFO:root:Training loss : 9.696257162094117
 INFO:root:--------------------------------------------
-INFO:root:At 74% of epoch 1
-INFO:root:Training loss : 6.44371075630188
+INFO:root:At 67% of epoch 1
+INFO:root:Training loss : 9.660982608795166
 INFO:root:--------------------------------------------
-INFO:root:At 85% of epoch 1
-INFO:root:Training loss : 6.392660641670227
+INFO:root:At 70% of epoch 1
+INFO:root:Training loss : 9.641005945205688
 INFO:root:--------------------------------------------
-INFO:root:At 96% of epoch 1
-INFO:root:Training loss : 6.260471272468567
+INFO:root:At 73% of epoch 1
+INFO:root:Training loss : 9.535665059089661
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 1
+INFO:root:Training loss : 9.665541076660157
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 1
+INFO:root:Training loss : 9.481466507911682
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 1
+INFO:root:Training loss : 9.645521092414857
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 1
+INFO:root:Training loss : 9.528388905525208
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 1
+INFO:root:Training loss : 9.67395522594452
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 1
+INFO:root:Training loss : 9.263671469688415
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 1
+INFO:root:Training loss : 9.425393080711364
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 1
+INFO:root:Training loss : 9.34496076107025
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 1
+INFO:root:Training loss : 9.03293410539627
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 2
+INFO:root:Training loss : 9.021617150306701
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 2
+INFO:root:Training loss : 8.76449773311615
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 2
+INFO:root:Training loss : 8.748125076293945
 INFO:root:--------------------------------------------
 INFO:root:At 11% of epoch 2
-INFO:root:Training loss : 6.011030209064484
+INFO:root:Training loss : 8.677134132385254
 INFO:root:--------------------------------------------
-INFO:root:At 21% of epoch 2
-INFO:root:Training loss : 6.036464130878448
+INFO:root:At 14% of epoch 2
+INFO:root:Training loss : 8.535318422317506
 INFO:root:--------------------------------------------
-INFO:root:At 32% of epoch 2
-INFO:root:Training loss : 6.077629268169403
+INFO:root:At 17% of epoch 2
+INFO:root:Training loss : 8.547152149677277
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 2
+INFO:root:Training loss : 8.528792464733124
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 2
+INFO:root:Training loss : 8.476332914829253
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 2
+INFO:root:Training loss : 8.45041332244873
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 2
+INFO:root:Training loss : 8.570778918266296
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 2
+INFO:root:Training loss : 8.523930418491364
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 2
+INFO:root:Training loss : 8.483250272274017
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 2
+INFO:root:Training loss : 8.353632879257201
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 2
+INFO:root:Training loss : 8.454773080348968
 INFO:root:--------------------------------------------
 INFO:root:At 42% of epoch 2
-INFO:root:Training loss : 5.898137605190277
+INFO:root:Training loss : 8.502395534515381
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 2
+INFO:root:Training loss : 8.470767188072205
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 2
+INFO:root:Training loss : 8.380059266090393
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 2
+INFO:root:Training loss : 8.2685142993927
 INFO:root:--------------------------------------------
 INFO:root:At 53% of epoch 2
-INFO:root:Training loss : 5.916590404510498
+INFO:root:Training loss : 8.227026259899139
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 2
+INFO:root:Training loss : 8.36037847995758
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 2
+INFO:root:Training loss : 8.254630148410797
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 2
+INFO:root:Training loss : 8.203346061706544
 INFO:root:--------------------------------------------
 INFO:root:At 64% of epoch 2
-INFO:root:Training loss : 5.898276054859162
+INFO:root:Training loss : 8.223626303672791
 INFO:root:--------------------------------------------
-INFO:root:At 74% of epoch 2
-INFO:root:Training loss : 5.9813674807548525
+INFO:root:At 67% of epoch 2
+INFO:root:Training loss : 8.037512874603271
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 2
+INFO:root:Training loss : 8.130205380916596
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 2
+INFO:root:Training loss : 8.13156932592392
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 2
+INFO:root:Training loss : 8.151540911197662
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 2
+INFO:root:Training loss : 7.9533139824867245
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 2
+INFO:root:Training loss : 8.048289775848389
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 2
+INFO:root:Training loss : 8.04198079109192
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 2
+INFO:root:Training loss : 8.017052829265594
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 2
+INFO:root:Training loss : 7.709180009365082
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 2
+INFO:root:Training loss : 8.019181764125824
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 2
+INFO:root:Training loss : 8.077377617359161
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 2
+INFO:root:Training loss : 8.048508882522583
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 3
+INFO:root:Training loss : 7.437707912921906
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 3
+INFO:root:Training loss : 7.608712160587311
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 3
+INFO:root:Training loss : 7.759741950035095
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 3
+INFO:root:Training loss : 7.690498566627502
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 3
+INFO:root:Training loss : 7.628953421115876
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 3
+INFO:root:Training loss : 7.594871187210083
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 3
+INFO:root:Training loss : 7.667528843879699
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 3
+INFO:root:Training loss : 7.734789431095123
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 3
+INFO:root:Training loss : 7.629992759227752
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 3
+INFO:root:Training loss : 7.69496203660965
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 3
+INFO:root:Training loss : 7.615749812126159
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 3
+INFO:root:Training loss : 7.567103016376495
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 3
+INFO:root:Training loss : 7.645851397514344
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 3
+INFO:root:Training loss : 7.729494678974151
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 3
+INFO:root:Training loss : 7.531833350658417
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 3
+INFO:root:Training loss : 7.729977762699127
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 3
+INFO:root:Training loss : 7.636459159851074
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 3
+INFO:root:Training loss : 7.575097703933716
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 3
+INFO:root:Training loss : 7.649696731567383
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 3
+INFO:root:Training loss : 7.648889350891113
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 3
+INFO:root:Training loss : 7.834395098686218
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 3
+INFO:root:Training loss : 7.682185351848602
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 3
+INFO:root:Training loss : 7.828452682495117
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 3
+INFO:root:Training loss : 7.6097212672233585
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 3
+INFO:root:Training loss : 7.626582455635071
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 3
+INFO:root:Training loss : 7.638435578346252
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 3
+INFO:root:Training loss : 7.688767004013061
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 3
+INFO:root:Training loss : 7.56429226398468
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 3
+INFO:root:Training loss : 7.61005071401596
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 3
+INFO:root:Training loss : 7.610771489143372
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 3
+INFO:root:Training loss : 7.635317838191986
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 3
+INFO:root:Training loss : 7.667551028728485
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 3
+INFO:root:Training loss : 7.711977922916413
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 3
+INFO:root:Training loss : 7.5895450711250305
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 3
+INFO:root:Training loss : 7.747682595252991
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 4
+INFO:root:Training loss : 7.43191112279892
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 4
+INFO:root:Training loss : 7.25853077173233
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 4
+INFO:root:Training loss : 7.2683006763458256
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 4
+INFO:root:Training loss : 7.335158002376557
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 4
+INFO:root:Training loss : 7.317169058322906
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 4
+INFO:root:Training loss : 7.486402547359466
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 4
+INFO:root:Training loss : 7.375348508358002
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 4
+INFO:root:Training loss : 7.555653810501099
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 4
+INFO:root:Training loss : 7.397586452960968
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 4
+INFO:root:Training loss : 7.454355943202972
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 4
+INFO:root:Training loss : 7.496148800849914
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 4
+INFO:root:Training loss : 7.4835928082466125
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 4
+INFO:root:Training loss : 7.56731368303299
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 4
+INFO:root:Training loss : 7.498382353782654
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 4
+INFO:root:Training loss : 7.5482234239578245
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 4
+INFO:root:Training loss : 7.450451004505157
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 4
+INFO:root:Training loss : 7.45326828956604
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 4
+INFO:root:Training loss : 7.560674965381622
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 4
+INFO:root:Training loss : 7.469964122772216
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 4
+INFO:root:Training loss : 7.49046368598938
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 4
+INFO:root:Training loss : 7.454110717773437
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 4
+INFO:root:Training loss : 7.336752164363861
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 4
+INFO:root:Training loss : 7.40006148815155
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 4
+INFO:root:Training loss : 7.567576777935028
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 4
+INFO:root:Training loss : 7.405635368824005
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 4
+INFO:root:Training loss : 7.382051455974579
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 4
+INFO:root:Training loss : 7.546219754219055
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 4
+INFO:root:Training loss : 7.504509150981903
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 4
+INFO:root:Training loss : 7.475535118579865
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 4
+INFO:root:Training loss : 7.348737263679505
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 4
+INFO:root:Training loss : 7.482746338844299
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 4
+INFO:root:Training loss : 7.4531449437141415
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 4
+INFO:root:Training loss : 7.446930348873138
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 4
+INFO:root:Training loss : 7.482689952850341
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 4
+INFO:root:Training loss : 7.350675559043884
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 5
+INFO:root:Training loss : 7.3712334632873535
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 5
+INFO:root:Training loss : 7.155393040180206
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 5
+INFO:root:Training loss : 7.124146485328675
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 5
+INFO:root:Training loss : 7.224733495712281
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 5
+INFO:root:Training loss : 7.220185875892639
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 5
+INFO:root:Training loss : 7.241527128219604
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 5
+INFO:root:Training loss : 7.21972246170044
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 5
+INFO:root:Training loss : 7.388304007053375
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 5
+INFO:root:Training loss : 7.3808300495147705
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 5
+INFO:root:Training loss : 7.27281174659729
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 5
+INFO:root:Training loss : 7.384465122222901
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 5
+INFO:root:Training loss : 7.316765677928925
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 5
+INFO:root:Training loss : 7.281079661846161
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 5
+INFO:root:Training loss : 7.413524961471557
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 5
+INFO:root:Training loss : 7.368223834037781
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 5
+INFO:root:Training loss : 7.336962616443634
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 5
+INFO:root:Training loss : 7.350586771965027
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 5
+INFO:root:Training loss : 7.370860517024994
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 5
+INFO:root:Training loss : 7.388871335983277
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 5
+INFO:root:Training loss : 7.206972217559814
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 5
+INFO:root:Training loss : 7.386225867271423
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 5
+INFO:root:Training loss : 7.487503182888031
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 5
+INFO:root:Training loss : 7.328337454795838
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 5
+INFO:root:Training loss : 7.424032592773438
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 5
+INFO:root:Training loss : 7.326153039932251
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 5
+INFO:root:Training loss : 7.401592290401458
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 5
+INFO:root:Training loss : 7.293701791763306
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 5
+INFO:root:Training loss : 7.334683299064636
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 5
+INFO:root:Training loss : 7.25549567937851
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 5
+INFO:root:Training loss : 7.35864999294281
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 5
+INFO:root:Training loss : 7.352886664867401
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 5
+INFO:root:Training loss : 7.24098664522171
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 5
+INFO:root:Training loss : 7.325535774230957
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 5
+INFO:root:Training loss : 7.368591248989105
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 5
+INFO:root:Training loss : 7.348132586479187
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 6
+INFO:root:Training loss : 7.275285065174103
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 6
+INFO:root:Training loss : 7.068180549144745
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 6
+INFO:root:Training loss : 7.023355269432068
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 6
+INFO:root:Training loss : 7.07855191230774
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 6
+INFO:root:Training loss : 7.0270368456840515
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 6
+INFO:root:Training loss : 7.067599081993103
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 6
+INFO:root:Training loss : 7.219536912441254
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 6
+INFO:root:Training loss : 7.088933670520783
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 6
+INFO:root:Training loss : 7.2489402294158936
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 6
+INFO:root:Training loss : 7.113012313842773
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 6
+INFO:root:Training loss : 7.156293880939484
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 6
+INFO:root:Training loss : 7.329913687705994
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 6
+INFO:root:Training loss : 7.199659812450409
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 6
+INFO:root:Training loss : 7.249148225784301
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 6
+INFO:root:Training loss : 7.318946766853332
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 6
+INFO:root:Training loss : 7.246960020065307
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 6
+INFO:root:Training loss : 7.260342073440552
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 6
+INFO:root:Training loss : 7.212666153907776
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 6
+INFO:root:Training loss : 7.218719303607941
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 6
+INFO:root:Training loss : 7.336816787719727
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 6
+INFO:root:Training loss : 7.24939101934433
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 6
+INFO:root:Training loss : 7.251646423339844
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 6
+INFO:root:Training loss : 7.283900022506714
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 6
+INFO:root:Training loss : 7.167794847488404
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 6
+INFO:root:Training loss : 7.222731447219848
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 6
+INFO:root:Training loss : 7.2241863489151
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 6
+INFO:root:Training loss : 7.224291813373566
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 6
+INFO:root:Training loss : 7.404922890663147
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 6
+INFO:root:Training loss : 7.2300684452056885
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 6
+INFO:root:Training loss : 7.233858859539032
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 6
+INFO:root:Training loss : 7.246565043926239
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 6
+INFO:root:Training loss : 7.309466981887818
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 6
+INFO:root:Training loss : 7.115430140495301
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 6
+INFO:root:Training loss : 7.222596263885498
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 6
+INFO:root:Training loss : 7.285099339485169
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 7
+INFO:root:Training loss : 7.054926967620849
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 7
+INFO:root:Training loss : 6.871820497512817
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 7
+INFO:root:Training loss : 6.91333954334259
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 7
+INFO:root:Training loss : 6.939869916439056
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 7
+INFO:root:Training loss : 7.047756636142731
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 7
+INFO:root:Training loss : 6.9936878204345705
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 7
+INFO:root:Training loss : 6.989133203029633
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 7
+INFO:root:Training loss : 7.199158036708832
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 7
+INFO:root:Training loss : 7.0877427697181705
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 7
+INFO:root:Training loss : 6.989646029472351
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 7
+INFO:root:Training loss : 7.085535848140717
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 7
+INFO:root:Training loss : 7.1234476327896115
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 7
+INFO:root:Training loss : 7.107960331439972
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 7
+INFO:root:Training loss : 7.118379676342011
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 7
+INFO:root:Training loss : 6.865056276321411
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 7
+INFO:root:Training loss : 7.074543523788452
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 7
+INFO:root:Training loss : 7.0230325102806095
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 7
+INFO:root:Training loss : 7.071059989929199
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 7
+INFO:root:Training loss : 7.081868994235992
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 7
+INFO:root:Training loss : 7.0303916215896605
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 7
+INFO:root:Training loss : 7.06072244644165
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 7
+INFO:root:Training loss : 7.005991864204407
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 7
+INFO:root:Training loss : 7.175644588470459
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 7
+INFO:root:Training loss : 7.271952307224273
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 7
+INFO:root:Training loss : 7.232745957374573
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 7
+INFO:root:Training loss : 7.152691185474396
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 7
+INFO:root:Training loss : 7.2416601300239565
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 7
+INFO:root:Training loss : 7.201674902439118
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 7
+INFO:root:Training loss : 7.194435572624206
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 7
+INFO:root:Training loss : 7.034946441650391
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 7
+INFO:root:Training loss : 7.202588665485382
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 7
+INFO:root:Training loss : 7.120531594753265
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 7
+INFO:root:Training loss : 7.07332444190979
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 7
+INFO:root:Training loss : 7.081967425346375
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 7
+INFO:root:Training loss : 7.284536302089691
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 8
+INFO:root:Training loss : 6.845297920703888
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 8
+INFO:root:Training loss : 6.695847260951996
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 8
+INFO:root:Training loss : 6.7579037070274355
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 8
+INFO:root:Training loss : 6.842849230766296
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 8
+INFO:root:Training loss : 6.758652365207672
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 8
+INFO:root:Training loss : 7.02239009141922
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 8
+INFO:root:Training loss : 6.726076424121857
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 8
+INFO:root:Training loss : 6.819036543369293
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 8
+INFO:root:Training loss : 6.9109592080116276
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 8
+INFO:root:Training loss : 6.958176624774933
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 8
+INFO:root:Training loss : 6.99171279668808
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 8
+INFO:root:Training loss : 7.008298802375793
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 8
+INFO:root:Training loss : 6.992743706703186
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 8
+INFO:root:Training loss : 6.970371973514557
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 8
+INFO:root:Training loss : 6.955153155326843
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 8
+INFO:root:Training loss : 6.990818130970001
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 8
+INFO:root:Training loss : 6.929263663291931
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 8
+INFO:root:Training loss : 6.981687009334564
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 8
+INFO:root:Training loss : 6.992699062824249
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 8
+INFO:root:Training loss : 7.041824615001678
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 8
+INFO:root:Training loss : 6.9194979786872866
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 8
+INFO:root:Training loss : 7.005988681316376
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 8
+INFO:root:Training loss : 6.870295619964599
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 8
+INFO:root:Training loss : 6.939252507686615
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 8
+INFO:root:Training loss : 7.011007833480835
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 8
+INFO:root:Training loss : 6.915122032165527
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 8
+INFO:root:Training loss : 6.977457642555237
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 8
+INFO:root:Training loss : 7.0241769552230835
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 8
+INFO:root:Training loss : 7.002091705799103
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 8
+INFO:root:Training loss : 7.090703237056732
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 8
+INFO:root:Training loss : 6.876662993431092
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 8
+INFO:root:Training loss : 7.0613936424255375
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 8
+INFO:root:Training loss : 6.983874928951264
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 8
+INFO:root:Training loss : 7.022809231281281
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 8
+INFO:root:Training loss : 7.0714690566062925
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 9
+INFO:root:Training loss : 6.754038095474243
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 9
+INFO:root:Training loss : 6.514792621135712
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 9
+INFO:root:Training loss : 6.525640785694122
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 9
+INFO:root:Training loss : 6.65748497247696
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 9
+INFO:root:Training loss : 6.733924293518067
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 9
+INFO:root:Training loss : 6.664670956134796
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 9
+INFO:root:Training loss : 6.696566474437714
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 9
+INFO:root:Training loss : 6.682968175411224
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 9
+INFO:root:Training loss : 6.75172678232193
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 9
+INFO:root:Training loss : 6.857202327251434
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 9
+INFO:root:Training loss : 6.841646420955658
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 9
+INFO:root:Training loss : 6.9032132744789125
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 9
+INFO:root:Training loss : 6.876463508605957
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 9
+INFO:root:Training loss : 6.918497717380523
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 9
+INFO:root:Training loss : 6.810065829753876
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 9
+INFO:root:Training loss : 6.878920245170593
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 9
+INFO:root:Training loss : 6.7681398630142215
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 9
+INFO:root:Training loss : 7.000052535533905
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 9
+INFO:root:Training loss : 6.836361646652222
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 9
+INFO:root:Training loss : 6.8549751996994015
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 9
+INFO:root:Training loss : 6.671118080615997
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 9
+INFO:root:Training loss : 6.837365126609802
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 9
+INFO:root:Training loss : 6.975222337245941
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 9
+INFO:root:Training loss : 6.668377470970154
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 9
+INFO:root:Training loss : 6.855351150035858
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 9
+INFO:root:Training loss : 6.886564767360687
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 9
+INFO:root:Training loss : 6.799256014823913
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 9
+INFO:root:Training loss : 6.995971369743347
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 9
+INFO:root:Training loss : 6.848994946479797
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 9
+INFO:root:Training loss : 6.915953099727631
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 9
+INFO:root:Training loss : 6.851111710071564
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 9
+INFO:root:Training loss : 6.885491955280304
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 9
+INFO:root:Training loss : 6.939423906803131
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 9
+INFO:root:Training loss : 6.914479553699493
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 9
+INFO:root:Training loss : 7.013121914863587
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 10
+INFO:root:Training loss : 6.581956911087036
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 10
+INFO:root:Training loss : 6.418185818195343
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 10
+INFO:root:Training loss : 6.387602841854095
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 10
+INFO:root:Training loss : 6.687932848930359
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 10
+INFO:root:Training loss : 6.552454328536987
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 10
+INFO:root:Training loss : 6.584820759296417
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 10
+INFO:root:Training loss : 6.621168994903565
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 10
+INFO:root:Training loss : 6.559278571605683
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 10
+INFO:root:Training loss : 6.735860741138458
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 10
+INFO:root:Training loss : 6.685736072063446
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 10
+INFO:root:Training loss : 6.609805941581726
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 10
+INFO:root:Training loss : 6.631634020805359
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 10
+INFO:root:Training loss : 6.693668484687805
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 10
+INFO:root:Training loss : 6.610983741283417
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 10
+INFO:root:Training loss : 6.809796917438507
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 10
+INFO:root:Training loss : 6.764416515827179
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 10
+INFO:root:Training loss : 6.82178828716278
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 10
+INFO:root:Training loss : 6.722646260261536
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 10
+INFO:root:Training loss : 6.69562714099884
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 10
+INFO:root:Training loss : 6.780753064155578
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 10
+INFO:root:Training loss : 6.708950352668762
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 10
+INFO:root:Training loss : 6.714830636978149
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 10
+INFO:root:Training loss : 6.7950541257858275
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 10
+INFO:root:Training loss : 6.791705000400543
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 10
+INFO:root:Training loss : 6.873569047451019
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 10
+INFO:root:Training loss : 6.685164976119995
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 10
+INFO:root:Training loss : 6.7764658570289615
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 10
+INFO:root:Training loss : 6.81232099533081
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 10
+INFO:root:Training loss : 6.731180512905121
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 10
+INFO:root:Training loss : 6.688950920104981
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 10
+INFO:root:Training loss : 6.729158425331116
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 10
+INFO:root:Training loss : 6.727649354934693
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 10
+INFO:root:Training loss : 6.706052887439728
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 10
+INFO:root:Training loss : 6.4704675555229185
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 10
+INFO:root:Training loss : 6.729796350002289
+INFO:root:--------------------------------------------
+INFO:root:#########  Epoch 10 #########
+INFO:root:Validation EER (0.1163287585776669, array(0.87391149)):
+INFO:root:Took: 441.34654474258423
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 11
+INFO:root:Training loss : 6.404958176612854
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 11
+INFO:root:Training loss : 6.293561851978302
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 11
+INFO:root:Training loss : 6.29678920507431
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 11
+INFO:root:Training loss : 6.34796257019043
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 11
+INFO:root:Training loss : 6.368140566349029
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 11
+INFO:root:Training loss : 6.35004689693451
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 11
+INFO:root:Training loss : 6.479903364181519
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 11
+INFO:root:Training loss : 6.572702932357788
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 11
+INFO:root:Training loss : 6.463839375972748
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 11
+INFO:root:Training loss : 6.568395555019379
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 11
+INFO:root:Training loss : 6.673876440525055
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 11
+INFO:root:Training loss : 6.519206249713898
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 11
+INFO:root:Training loss : 6.542124390602112
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 11
+INFO:root:Training loss : 6.692157530784607
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 11
+INFO:root:Training loss : 6.586842811107635
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 11
+INFO:root:Training loss : 6.5398915886878966
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 11
+INFO:root:Training loss : 6.684651243686676
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 11
+INFO:root:Training loss : 6.689851796627044
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 11
+INFO:root:Training loss : 6.787316465377808
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 11
+INFO:root:Training loss : 6.572198021411896
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 11
+INFO:root:Training loss : 6.53126140832901
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 11
+INFO:root:Training loss : 6.560355842113495
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 11
+INFO:root:Training loss : 6.637654316425324
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 11
+INFO:root:Training loss : 6.615282821655273
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 11
+INFO:root:Training loss : 6.545496678352356
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 11
+INFO:root:Training loss : 6.722702777385711
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 11
+INFO:root:Training loss : 6.664609849452972
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 11
+INFO:root:Training loss : 6.576577353477478
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 11
+INFO:root:Training loss : 6.538812005519867
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 11
+INFO:root:Training loss : 6.581204903125763
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 11
+INFO:root:Training loss : 6.457109606266021
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 11
+INFO:root:Training loss : 6.533943021297455
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 11
+INFO:root:Training loss : 6.775298511981964
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 11
+INFO:root:Training loss : 6.666552948951721
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 11
+INFO:root:Training loss : 6.550239169597626
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 12
+INFO:root:Training loss : 6.32727165222168
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 12
+INFO:root:Training loss : 5.908636891841889
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 12
+INFO:root:Training loss : 6.186462271213531
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 12
+INFO:root:Training loss : 6.195590305328369
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 12
+INFO:root:Training loss : 6.2698302388191225
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 12
+INFO:root:Training loss : 6.1901805877685545
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 12
+INFO:root:Training loss : 6.280194902420044
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 12
+INFO:root:Training loss : 6.431314074993134
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 12
+INFO:root:Training loss : 6.229286110401153
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 12
+INFO:root:Training loss : 6.330374073982239
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 12
+INFO:root:Training loss : 6.374277508258819
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 12
+INFO:root:Training loss : 6.386637496948242
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 12
+INFO:root:Training loss : 6.427167546749115
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 12
+INFO:root:Training loss : 6.662996590137482
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 12
+INFO:root:Training loss : 6.451232004165649
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 12
+INFO:root:Training loss : 6.39504075050354
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 12
+INFO:root:Training loss : 6.361943292617798
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 12
+INFO:root:Training loss : 6.428771698474884
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 12
+INFO:root:Training loss : 6.483839690685272
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 12
+INFO:root:Training loss : 6.372603785991669
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 12
+INFO:root:Training loss : 6.436773955821991
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 12
+INFO:root:Training loss : 6.384000396728515
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 12
+INFO:root:Training loss : 6.322041153907776
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 12
+INFO:root:Training loss : 6.527525186538696
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 12
+INFO:root:Training loss : 6.466000592708587
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 12
+INFO:root:Training loss : 6.518245506286621
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 12
+INFO:root:Training loss : 6.330905890464782
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 12
+INFO:root:Training loss : 6.515552616119384
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 12
+INFO:root:Training loss : 6.479578340053559
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 12
+INFO:root:Training loss : 6.617415344715118
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 12
+INFO:root:Training loss : 6.452536404132843
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 12
+INFO:root:Training loss : 6.525166344642639
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 12
+INFO:root:Training loss : 6.480295729637146
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 12
+INFO:root:Training loss : 6.553042721748352
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 12
+INFO:root:Training loss : 6.3711975574493405
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 13
+INFO:root:Training loss : 6.007446753978729
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 13
+INFO:root:Training loss : 6.01313441991806
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 13
+INFO:root:Training loss : 6.020573329925537
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 13
+INFO:root:Training loss : 6.004089760780334
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 13
+INFO:root:Training loss : 6.035411894321442
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 13
+INFO:root:Training loss : 6.134778547286987
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 13
+INFO:root:Training loss : 6.0924606084823605
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 13
+INFO:root:Training loss : 6.192511558532715
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 13
+INFO:root:Training loss : 6.227811872959137
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 13
+INFO:root:Training loss : 6.0360848069190975
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 13
+INFO:root:Training loss : 6.372507619857788
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 13
+INFO:root:Training loss : 6.1795330286026005
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 13
+INFO:root:Training loss : 6.2560132384300235
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 13
+INFO:root:Training loss : 6.221998476982117
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 13
+INFO:root:Training loss : 6.191855192184448
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 13
+INFO:root:Training loss : 6.259946203231811
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 13
+INFO:root:Training loss : 6.215234410762787
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 13
+INFO:root:Training loss : 6.300289011001587
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 13
+INFO:root:Training loss : 6.2016237616539005
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 13
+INFO:root:Training loss : 6.289479112625122
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 13
+INFO:root:Training loss : 6.4321037292480465
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 13
+INFO:root:Training loss : 6.325770437717438
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 13
+INFO:root:Training loss : 6.19361025094986
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 13
+INFO:root:Training loss : 6.255471956729889
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 13
+INFO:root:Training loss : 6.23272590637207
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 13
+INFO:root:Training loss : 6.368651294708252
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 13
+INFO:root:Training loss : 6.218392086029053
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 13
+INFO:root:Training loss : 6.302320766448974
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 13
+INFO:root:Training loss : 6.376414811611175
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 13
+INFO:root:Training loss : 6.275505638122558
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 13
+INFO:root:Training loss : 6.297924757003784
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 13
+INFO:root:Training loss : 6.270155882835388
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 13
+INFO:root:Training loss : 6.452706968784332
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 13
+INFO:root:Training loss : 6.30733312368393
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 13
+INFO:root:Training loss : 6.390760934352874
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 14
+INFO:root:Training loss : 5.810589182376861
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 14
+INFO:root:Training loss : 5.582985782623291
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 14
+INFO:root:Training loss : 5.77429176568985
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 14
+INFO:root:Training loss : 5.874215507507325
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 14
+INFO:root:Training loss : 5.863334321975708
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 14
+INFO:root:Training loss : 5.932168066501617
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 14
+INFO:root:Training loss : 6.037788057327271
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 14
+INFO:root:Training loss : 6.031028199195862
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 14
+INFO:root:Training loss : 6.188934874534607
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 14
+INFO:root:Training loss : 5.976132130622863
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 14
+INFO:root:Training loss : 6.036154103279114
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 14
+INFO:root:Training loss : 6.035398149490357
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 14
+INFO:root:Training loss : 6.020345747470856
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 14
+INFO:root:Training loss : 6.144894850254059
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 14
+INFO:root:Training loss : 6.128036749362946
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 14
+INFO:root:Training loss : 6.073521101474762
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 14
+INFO:root:Training loss : 6.258678245544433
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 14
+INFO:root:Training loss : 6.044300782680511
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 14
+INFO:root:Training loss : 5.971223056316376
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 14
+INFO:root:Training loss : 6.083780443668365
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 14
+INFO:root:Training loss : 6.036099529266357
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 14
+INFO:root:Training loss : 6.064253544807434
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 14
+INFO:root:Training loss : 6.092512452602387
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 14
+INFO:root:Training loss : 6.078187501430511
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 14
+INFO:root:Training loss : 6.2787760376930235
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 14
+INFO:root:Training loss : 6.269540023803711
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 14
+INFO:root:Training loss : 6.085555827617645
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 14
+INFO:root:Training loss : 6.209377586841583
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 14
+INFO:root:Training loss : 6.292280828952789
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 14
+INFO:root:Training loss : 6.118889951705933
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 14
+INFO:root:Training loss : 6.221792769432068
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 14
+INFO:root:Training loss : 6.082014787197113
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 14
+INFO:root:Training loss : 6.322611880302429
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 14
+INFO:root:Training loss : 6.012817335128784
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 14
+INFO:root:Training loss : 6.05549430847168
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 15
+INFO:root:Training loss : 5.63045608997345
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 15
+INFO:root:Training loss : 5.490563690662384
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 15
+INFO:root:Training loss : 5.692194890975952
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 15
+INFO:root:Training loss : 5.855613195896149
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 15
+INFO:root:Training loss : 5.855395209789276
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 15
+INFO:root:Training loss : 5.657665634155274
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 15
+INFO:root:Training loss : 5.668556368350982
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 15
+INFO:root:Training loss : 5.606481003761291
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 15
+INFO:root:Training loss : 5.961211240291595
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 15
+INFO:root:Training loss : 5.68308824300766
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 15
+INFO:root:Training loss : 5.981907558441162
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 15
+INFO:root:Training loss : 5.898600399494171
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 15
+INFO:root:Training loss : 5.966554963588715
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 15
+INFO:root:Training loss : 5.95287983417511
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 15
+INFO:root:Training loss : 5.96398559808731
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 15
+INFO:root:Training loss : 5.945556211471557
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 15
+INFO:root:Training loss : 5.82349042892456
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 15
+INFO:root:Training loss : 5.996957814693451
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 15
+INFO:root:Training loss : 5.931907105445862
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 15
+INFO:root:Training loss : 6.055682635307312
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 15
+INFO:root:Training loss : 5.786920130252838
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 15
+INFO:root:Training loss : 6.059075140953064
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 15
+INFO:root:Training loss : 5.887695360183716
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 15
+INFO:root:Training loss : 5.980609047412872
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 15
+INFO:root:Training loss : 6.039890742301941
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 15
+INFO:root:Training loss : 5.9982553124427795
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 15
+INFO:root:Training loss : 5.766730868816376
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 15
+INFO:root:Training loss : 5.98867758512497
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 15
+INFO:root:Training loss : 5.981840360164642
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 15
+INFO:root:Training loss : 5.958377814292907
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 15
+INFO:root:Training loss : 5.966862475872039
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 15
+INFO:root:Training loss : 6.101581048965454
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 15
+INFO:root:Training loss : 5.8806251049041744
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 15
+INFO:root:Training loss : 6.069935512542725
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 15
+INFO:root:Training loss : 6.029592347145081
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 16
+INFO:root:Training loss : 5.452486073970794
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 16
+INFO:root:Training loss : 5.376977998018265
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 16
+INFO:root:Training loss : 5.334966504573822
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 16
+INFO:root:Training loss : 5.373267471790314
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 16
+INFO:root:Training loss : 5.517427599430084
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 16
+INFO:root:Training loss : 5.727581334114075
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 16
+INFO:root:Training loss : 5.697485756874085
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 16
+INFO:root:Training loss : 5.713844299316406
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 16
+INFO:root:Training loss : 5.683575904369354
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 16
+INFO:root:Training loss : 5.793578720092773
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 16
+INFO:root:Training loss : 5.714935207366944
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 16
+INFO:root:Training loss : 5.62018541097641
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 16
+INFO:root:Training loss : 5.850319528579712
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 16
+INFO:root:Training loss : 5.744699001312256
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 16
+INFO:root:Training loss : 5.818317568302154
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 16
+INFO:root:Training loss : 5.899749743938446
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 16
+INFO:root:Training loss : 5.802786362171173
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 16
+INFO:root:Training loss : 5.715391397476196
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 16
+INFO:root:Training loss : 5.805033433437347
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 16
+INFO:root:Training loss : 5.861474859714508
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 16
+INFO:root:Training loss : 5.801285648345948
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 16
+INFO:root:Training loss : 5.811591780185699
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 16
+INFO:root:Training loss : 5.979445064067841
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 16
+INFO:root:Training loss : 5.863788378238678
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 16
+INFO:root:Training loss : 5.687975490093232
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 16
+INFO:root:Training loss : 5.777295064926148
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 16
+INFO:root:Training loss : 5.832420933246612
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 16
+INFO:root:Training loss : 5.7623764157295225
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 16
+INFO:root:Training loss : 5.747882342338562
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 16
+INFO:root:Training loss : 6.0079817295074465
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 16
+INFO:root:Training loss : 5.873704278469086
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 16
+INFO:root:Training loss : 5.818153238296508
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 16
+INFO:root:Training loss : 5.780530190467834
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 16
+INFO:root:Training loss : 5.759753036499023
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 16
+INFO:root:Training loss : 5.949271178245544
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 17
+INFO:root:Training loss : 5.3234606146812435
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 17
+INFO:root:Training loss : 5.276707017421723
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 17
+INFO:root:Training loss : 5.4216931700706485
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 17
+INFO:root:Training loss : 5.509201943874359
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 17
+INFO:root:Training loss : 5.606839799880982
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 17
+INFO:root:Training loss : 5.336001193523407
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 17
+INFO:root:Training loss : 5.402497684955597
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 17
+INFO:root:Training loss : 5.361454141139984
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 17
+INFO:root:Training loss : 5.609348130226135
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 17
+INFO:root:Training loss : 5.4176270961761475
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 17
+INFO:root:Training loss : 5.607271695137024
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 17
+INFO:root:Training loss : 5.680048966407776
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 17
+INFO:root:Training loss : 5.643789935111999
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 17
+INFO:root:Training loss : 5.451454603672028
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 17
+INFO:root:Training loss : 5.569717907905579
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 17
+INFO:root:Training loss : 5.447306001186371
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 17
+INFO:root:Training loss : 5.701478898525238
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 17
+INFO:root:Training loss : 5.7851297616958615
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 17
+INFO:root:Training loss : 5.622775733470917
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 17
+INFO:root:Training loss : 5.6408936262130736
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 17
+INFO:root:Training loss : 5.737308704853058
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 17
+INFO:root:Training loss : 5.69742728471756
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 17
+INFO:root:Training loss : 5.781773352622986
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 17
+INFO:root:Training loss : 5.621030235290528
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 17
+INFO:root:Training loss : 5.673829996585846
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 17
+INFO:root:Training loss : 5.713161432743073
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 17
+INFO:root:Training loss : 5.690437054634094
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 17
+INFO:root:Training loss : 5.602720475196838
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 17
+INFO:root:Training loss : 5.824197506904602
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 17
+INFO:root:Training loss : 5.742959833145141
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 17
+INFO:root:Training loss : 5.651269614696503
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 17
+INFO:root:Training loss : 5.836352813243866
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 17
+INFO:root:Training loss : 5.490793943405151
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 17
+INFO:root:Training loss : 5.70221529006958
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 17
+INFO:root:Training loss : 5.726506173610687
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 18
+INFO:root:Training loss : 5.067773681879044
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 18
+INFO:root:Training loss : 5.096413952112198
+INFO:root:--------------------------------------------
+INFO:root:At 8% of epoch 18
+INFO:root:Training loss : 5.073000073432922
+INFO:root:--------------------------------------------
+INFO:root:At 11% of epoch 18
+INFO:root:Training loss : 5.166451549530029
+INFO:root:--------------------------------------------
+INFO:root:At 14% of epoch 18
+INFO:root:Training loss : 5.198226737976074
+INFO:root:--------------------------------------------
+INFO:root:At 17% of epoch 18
+INFO:root:Training loss : 5.279096007347107
+INFO:root:--------------------------------------------
+INFO:root:At 20% of epoch 18
+INFO:root:Training loss : 5.381842470169067
+INFO:root:--------------------------------------------
+INFO:root:At 22% of epoch 18
+INFO:root:Training loss : 5.276872932910919
+INFO:root:--------------------------------------------
+INFO:root:At 25% of epoch 18
+INFO:root:Training loss : 5.275856935977936
+INFO:root:--------------------------------------------
+INFO:root:At 28% of epoch 18
+INFO:root:Training loss : 5.457433986663818
+INFO:root:--------------------------------------------
+INFO:root:At 31% of epoch 18
+INFO:root:Training loss : 5.596650457382202
+INFO:root:--------------------------------------------
+INFO:root:At 34% of epoch 18
+INFO:root:Training loss : 5.50193704366684
+INFO:root:--------------------------------------------
+INFO:root:At 36% of epoch 18
+INFO:root:Training loss : 5.358726930618286
+INFO:root:--------------------------------------------
+INFO:root:At 39% of epoch 18
+INFO:root:Training loss : 5.741876465082169
+INFO:root:--------------------------------------------
+INFO:root:At 42% of epoch 18
+INFO:root:Training loss : 5.487937235832215
+INFO:root:--------------------------------------------
+INFO:root:At 45% of epoch 18
+INFO:root:Training loss : 5.405186855793
+INFO:root:--------------------------------------------
+INFO:root:At 47% of epoch 18
+INFO:root:Training loss : 5.574247699975968
+INFO:root:--------------------------------------------
+INFO:root:At 50% of epoch 18
+INFO:root:Training loss : 5.362605118751526
+INFO:root:--------------------------------------------
+INFO:root:At 53% of epoch 18
+INFO:root:Training loss : 5.665727198123932
+INFO:root:--------------------------------------------
+INFO:root:At 56% of epoch 18
+INFO:root:Training loss : 5.686776566505432
+INFO:root:--------------------------------------------
+INFO:root:At 59% of epoch 18
+INFO:root:Training loss : 5.600269186496734
+INFO:root:--------------------------------------------
+INFO:root:At 61% of epoch 18
+INFO:root:Training loss : 5.442105066776276
+INFO:root:--------------------------------------------
+INFO:root:At 64% of epoch 18
+INFO:root:Training loss : 5.593920731544495
+INFO:root:--------------------------------------------
+INFO:root:At 67% of epoch 18
+INFO:root:Training loss : 5.779418277740478
+INFO:root:--------------------------------------------
+INFO:root:At 70% of epoch 18
+INFO:root:Training loss : 5.703413999080658
+INFO:root:--------------------------------------------
+INFO:root:At 73% of epoch 18
+INFO:root:Training loss : 5.396539485454559
+INFO:root:--------------------------------------------
+INFO:root:At 75% of epoch 18
+INFO:root:Training loss : 5.560231280326843
+INFO:root:--------------------------------------------
+INFO:root:At 78% of epoch 18
+INFO:root:Training loss : 5.5258231401443485
+INFO:root:--------------------------------------------
+INFO:root:At 81% of epoch 18
+INFO:root:Training loss : 5.594289374351502
+INFO:root:--------------------------------------------
+INFO:root:At 84% of epoch 18
+INFO:root:Training loss : 5.392541325092315
+INFO:root:--------------------------------------------
+INFO:root:At 87% of epoch 18
+INFO:root:Training loss : 5.512393736839295
+INFO:root:--------------------------------------------
+INFO:root:At 89% of epoch 18
+INFO:root:Training loss : 5.5987854361534115
+INFO:root:--------------------------------------------
+INFO:root:At 92% of epoch 18
+INFO:root:Training loss : 5.806591856479645
+INFO:root:--------------------------------------------
+INFO:root:At 95% of epoch 18
+INFO:root:Training loss : 5.694669771194458
+INFO:root:--------------------------------------------
+INFO:root:At 98% of epoch 18
+INFO:root:Training loss : 5.575413107872009
+INFO:root:--------------------------------------------
+INFO:root:At 3% of epoch 19
+INFO:root:Training loss : 5.048580801486969
+INFO:root:--------------------------------------------
+INFO:root:At 6% of epoch 19
+INFO:root:Training loss : 4.914346104860305
 INFO:root:--------------------------------------------
